@@ -1,6 +1,6 @@
 ARG TAG=main
 
-FROM hub.busse.dev/mono:${TAG} as builder
+FROM ghcr.io/v2/bussedev/mono:${TAG} as builder
 ARG SERVICE_PATH
 RUN pnpm i \
   && pnpm -r --filter {$SERVICE_PATH} build \
