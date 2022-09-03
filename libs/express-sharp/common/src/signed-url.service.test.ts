@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 
-import { ConfigService } from '@express-sharp/config'
+import { ConfigService } from '@edged/config'
 import { container } from 'tsyringe'
 import { UrlSigner } from './signed-url.service'
 

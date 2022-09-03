@@ -1,4 +1,4 @@
-import { ToNumber } from '@express-sharp/common'
+import { ToNumber } from '@edged/common'
 import * as ClassValidator from 'class-validator'
 import { IsDefined, IsOptional, Min } from 'class-validator'
 import { NextFunction } from 'express'

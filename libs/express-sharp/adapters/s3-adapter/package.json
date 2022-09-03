@@ -1,11 +1,11 @@
 {
-  "name": "@express-sharp/s3-adapter",
+  "name": "@edged/s3-adapter",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@express-sharp/core": "workspace:*",
+    "@edged/core": "workspace:*",
     "aws-sdk": "^2.987.0",
     "tslib": "^2.4.0"
   },

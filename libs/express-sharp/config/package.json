@@ -1,11 +1,11 @@
 {
-  "name": "@express-sharp/config",
+  "name": "@edged/config",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@express-sharp/core": "workspace:*",
+    "@edged/core": "workspace:*",
     "dotenv": "^16.0.2",
     "tslib": "^2.4.0",
     "tsyringe": "^4.7.0"

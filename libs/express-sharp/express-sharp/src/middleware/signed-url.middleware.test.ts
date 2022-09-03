@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 
-import { ConfigService } from '@express-sharp/config'
+import { ConfigService } from '@edged/config'
 import { NextFunction } from 'express'
 import { container } from 'tsyringe'
 import { ForbiddenException } from '../http-exception'

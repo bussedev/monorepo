@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-inferrable-types */
-import { format } from '@express-sharp/core'
+import { format } from '@edged/core'
 import {
   IsBoolean,
   IsIn,

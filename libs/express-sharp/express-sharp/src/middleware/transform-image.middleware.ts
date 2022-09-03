@@ -1,5 +1,5 @@
-import { ResizeDto } from '@express-sharp/common'
-import { ImageAdapter } from '@express-sharp/core'
+import { ResizeDto } from '@edged/common'
+import { ImageAdapter } from '@edged/core'
 import { NextFunction, Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { Transformer } from '../transformer.service'

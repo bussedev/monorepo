@@ -1,4 +1,4 @@
-import { UrlSigner } from '@express-sharp/common'
+import { UrlSigner } from '@edged/common'
 import { NextFunction, Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { ForbiddenException } from '../http-exception'

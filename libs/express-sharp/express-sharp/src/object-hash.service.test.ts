@@ -1,5 +1,5 @@
-import { ToNumber, Transform } from '@express-sharp/common'
-import { ConfigService } from '@express-sharp/config'
+import { ToNumber, Transform } from '@edged/common'
+import { ConfigService } from '@edged/config'
 import { container } from 'tsyringe'
 import { ObjectHash } from './object-hash.service'
 

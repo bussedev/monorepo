@@ -1,4 +1,4 @@
-import { ResizeDto } from '@express-sharp/common'
+import { ResizeDto } from '@edged/common'
 import { NextFunction, Request, Response } from 'express'
 
 export function useWebpIfSupported(

@@ -1,4 +1,4 @@
-import { getLogger, ImageAdapter } from '@express-sharp/core'
+import { getLogger, ImageAdapter } from '@edged/core'
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 import httpStatus from 'http-status'
 export class HttpAdapter implements ImageAdapter {

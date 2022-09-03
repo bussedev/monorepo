@@ -1,4 +1,4 @@
-import { camelToSnake } from '@express-sharp/core'
+import { camelToSnake } from '@edged/core'
 import { config } from 'dotenv'
 import { singleton } from 'tsyringe'
 

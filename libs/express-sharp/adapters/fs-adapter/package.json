@@ -1,10 +1,10 @@
 {
-  "name": "@express-sharp/fs-adapter",
+  "name": "@edged/fs-adapter",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "dependencies": {
-    "@express-sharp/core": "workspace:*",
+    "@edged/core": "workspace:*",
     "tslib": "^2.4.0"
   },
   "devDependencies": {

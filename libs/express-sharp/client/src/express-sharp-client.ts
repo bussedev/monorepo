@@ -1,5 +1,5 @@
-import { ImageUrl } from '@express-sharp/common'
-import { ConfigService } from '@express-sharp/config'
+import { ImageUrl } from '@edged/common'
+import { ConfigService } from '@edged/config'
 import { container } from 'tsyringe'
 
 export function createClient(endpoint: string, secret?: string): ImageUrl {

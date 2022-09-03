@@ -1,4 +1,4 @@
-import { QueryParams } from '@express-sharp/core'
+import { QueryParams } from '@edged/core'
 import { NextFunction, Request, Response } from 'express'
 
 export function transformQueryParams(
