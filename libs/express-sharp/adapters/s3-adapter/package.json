@@ -1,0 +1,43 @@
+{
+  "name": "@edged/s3-adapter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@edged/core": "workspace:*",
+    "aws-sdk": "^2.987.0",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@busse/tsconfig": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "start:example": "DEBUG=express-sharp* nodemon --exec 'node -r ts-node/register' -w . --inspect example/app.ts",
+    "lint": "eslint --cache .",
+    "test": "jest",
+    "ci:test": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=16.13.0",
+    "pnpm": ">=6.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmb0/express-sharp.git"
+  },
+  "keywords": [
+    "express",
+    "sharp",
+    "image",
+    "scale"
+  ],
+  "author": "Philipp Busse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmb0/express-sharp/issues"
+  },
+  "homepage": "https://github.com/pmb0/express-sharp#readme"
+}

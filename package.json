@@ -22,10 +22,10 @@
   },
   "private": true,
   "devDependencies": {
-    "@busse/create-package": "workspace:*",
-    "@busse/eslint-config": "workspace:*",
-    "@busse/jest-config": "workspace:*",
-    "@busse/tsconfig": "workspace:*",
+    "@busse/create-package": "1.0.0",
+    "@busse/eslint-config": "1.0.0",
+    "@busse/jest-config": "1.0.0",
+    "@busse/tsconfig": "1.0.1",
     "@changesets/cli": "^2.24.3",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
@@ -57,7 +57,7 @@
     ]
   },
   "dependencies": {
-    "@busse/homebridge-pluggit": "workspace:*",
+    "@busse/homebridge-pluggit": "1.2.2",
     "@nestjs/apollo": "^10.0.16",
     "@nestjs/axios": "^0.0.8",
     "@nestjs/common": "^8.4.7",

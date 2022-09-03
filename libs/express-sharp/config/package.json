@@ -1,0 +1,46 @@
+{
+  "name": "@edged/config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@edged/core": "workspace:*",
+    "dotenv": "^16.0.2",
+    "tslib": "^2.4.0",
+    "tsyringe": "^4.7.0"
+  },
+  "devDependencies": {
+    "@busse/jest-config": "workspace:*",
+    "@busse/tsconfig": "workspace:*",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "lint": "eslint --cache .",
+    "test": "jest",
+    "ci:test": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=16.13.0",
+    "pnpm": ">=6.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmb0/express-sharp.git"
+  },
+  "keywords": [
+    "express",
+    "sharp",
+    "image",
+    "scale"
+  ],
+  "author": "Philipp Busse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmb0/express-sharp/issues"
+  },
+  "homepage": "https://github.com/pmb0/express-sharp#readme"
+}

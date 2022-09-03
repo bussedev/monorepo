@@ -1,0 +1,14 @@
+import baseConfig from '@edged/jest-config'
+import { Config } from '@jest/types'
+
+const config: Config.InitialOptions = {
+  ...baseConfig,
+  moduleNameMapper: {
+    '^(@edged/config)(.*)$': '<rootDir>/libs/$1$2',
+    // '^(@edged/common)(.*)$': path.join(__dirname, '../common/src$2'),
+    '^@edged/common(.*)$': '<rootDir>/../../common/src$1',
+  },
+}
+console.log({ config })
+
+export default config

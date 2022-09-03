@@ -119,7 +119,7 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
   #peerDepScopes = ['@nestjs']
   #peerDeps = ['']
 
-  #workspaceScopes = ['@busse']
+  #workspaceScopes = ['@busse', '@edged']
   #workspaceScopesPackageExclude = ['@heise/eslint-config']
   #workspaceVersion = 'workspace:*'
 

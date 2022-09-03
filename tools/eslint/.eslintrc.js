@@ -49,9 +49,10 @@ module.exports = {
       },
     },
     {
-      files: ['*.spec.ts', '*.spec.tsx'],
+      files: ['*.spec.ts', '*.spec.tsx', '*.test.ts'],
       rules: {
         '@typescript-eslint/unbound-method': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
       },
     },
     {

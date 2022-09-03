@@ -1,0 +1,34 @@
+{
+  "extends": "@busse/tsconfig",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "src"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "references": [
+    {
+      "path": "../adapters/fs-adapter/tsconfig.json"
+    },
+    {
+      "path": "../adapters/http-adapter/tsconfig.json"
+    },
+    {
+      "path": "../client/tsconfig.json"
+    },
+    {
+      "path": "../common/tsconfig.json"
+    },
+    {
+      "path": "../config/tsconfig.json"
+    },
+    {
+      "path": "../core/tsconfig.json"
+    }
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

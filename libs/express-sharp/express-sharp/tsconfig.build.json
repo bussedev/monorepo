@@ -1,0 +1,27 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../adapters/fs-adapter/tsconfig.build.json"
+    },
+    {
+      "path": "../adapters/http-adapter/tsconfig.build.json"
+    },
+    {
+      "path": "../client/tsconfig.build.json"
+    },
+    {
+      "path": "../common/tsconfig.build.json"
+    },
+    {
+      "path": "../config/tsconfig.build.json"
+    },
+    {
+      "path": "../core/tsconfig.build.json"
+    }
+  ]
+}

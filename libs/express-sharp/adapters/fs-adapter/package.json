@@ -1,0 +1,44 @@
+{
+  "name": "@edged/fs-adapter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@edged/core": "workspace:*",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@busse/jest-config": "workspace:*",
+    "@busse/tsconfig": "workspace:*",
+    "jest": "^29.0.1",
+    "ts-jest": "^28.0.8"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "start:example": "DEBUG=express-sharp* nodemon --exec 'node -r ts-node/register' -w . --inspect example/app.ts",
+    "lint": "eslint --cache .",
+    "test": "jest",
+    "ci:test": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=16.13.0",
+    "pnpm": ">=6.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmb0/express-sharp.git"
+  },
+  "keywords": [
+    "express",
+    "sharp",
+    "image",
+    "scale"
+  ],
+  "author": "Philipp Busse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmb0/express-sharp/issues"
+  },
+  "homepage": "https://github.com/pmb0/express-sharp#readme"
+}
