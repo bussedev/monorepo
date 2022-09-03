@@ -10,7 +10,7 @@
   "devDependencies": {
     "@busse/jest-config": "workspace:*",
     "@busse/tsconfig": "workspace:*",
-    "jest": "^29.0.1",
+    "jest": "^29.0.2",
     "ts-jest": "^28.0.8"
   },
   "scripts": {

@@ -21,7 +21,7 @@
     "@edged/express-sharp": "workspace:*",
     "@edged/http-adapter": "workspace:*",
     "@edged/s3-adapter": "workspace:*",
-    "express": "^4.17.1",
+    "express": "^4.18.1",
     "keyv": "^4.5.0",
     "pkg": "^5.8.0",
     "pug": "^3.0.2",
