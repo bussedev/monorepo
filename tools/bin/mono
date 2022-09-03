@@ -1,11 +1,14 @@
 #!/bin/bash
 
+set -e
+
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../.. >/dev/null && pwd )"
+
+SERVICE_FILES=$(for file in $(git ls-files services | grep compose); do echo -f $file; done)
 
 COMPOSE="docker-compose \
   -f docker-compose.yml \
-  -f services/pluggit/pluggit-collector/docker-compose.yml \
-  -f services/pluggit/pluggit-web/docker-compose.yml \
+  $SERVICE_FILES \
   -f tools/docker/mono.yml \
   -f tools/docker/nginx-proxy.yml
 "
