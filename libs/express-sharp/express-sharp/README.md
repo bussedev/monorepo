@@ -9,11 +9,11 @@
 
 # Description <!-- omit in toc -->
 
-express-sharp adds real-time image processing routes to your express application. Images are processed with [sharp](https://github.com/lovell/sharp), a fast Node.js module for resizing images.
+`@edged/express-sharp` adds real-time image processing routes to your express application. Images are processed with [sharp](https://github.com/lovell/sharp), a fast Node.js module for resizing images.
 
 ```
-                      express-sharp
-    Express app         endpoint          image path    transformation                
+                  @edged/express-sharp
+    Express app         endpoint          image path    transformation
 ┌─────────────────┐┌────────────────┐┌──────────────────┐ ┌────────┐
 https://example.com/path/to/my-scaler/images/my-image.jpg?w=100&h=50
 ```
@@ -26,7 +26,6 @@ Original images are loaded via an image adapter. Currently this includes HTTP an
 - [Supports multiple backends, from which the original images are downloaded](#image-adapters)
 - [Supports multiple caching backends](#caching)
 - [Image URLs can be signed to prevent attacks](#url-signing)
-
 
 # Table of contents <!-- omit in toc -->
 
@@ -47,18 +46,18 @@ Original images are loaded via an image adapter. Currently this includes HTTP an
 # Install
 
 ```sh
-$ yarn add express-sharp
+$ npm i @edged/express-sharp
 ```
 
 See [sharp installation](https://sharp.pixelplumbing.com/install) for additional installation instructions.
 
 # Express server integration
 
-Example *app.js* (See also `example/app.ts` in this project):
+Example _app.js_ (See also `example/app.ts` in this project):
 
 ```js
 import express from 'express'
-import { expressSharp, FsAdapter, HttpAdapter } from 'express-sharp'
+import { expressSharp, FsAdapter, HttpAdapter } from '@edged/express-sharp'
 
 const app = express()
 
@@ -69,7 +68,7 @@ app.use(
     imageAdapter: new HttpAdapter({
       prefixUrl: 'http://example.com/images',
     }),
-  })
+  }),
 )
 
 // Alternative: Load original images from disk
@@ -77,7 +76,7 @@ app.use(
   '/fs-endpoint',
   expressSharp({
     imageAdapter: new FsAdapter(path.join(__dirname, 'images')),
-  })
+  }),
 )
 
 app.listen(3000)
@@ -98,20 +97,20 @@ curl http://my-server/express-sharp-endpoint/images/image.jpg?w=400&h=400&f=webp
 ## Server configuration
 
 ```js
-import { expressSharp } from 'express-sharp'
+import { expressSharp } from '@edged/express-sharp'
 
 app.use('/some-http-endpoint', expressSharp(options))
 ```
 
 Supported `options`:
 
-| Name | Description | Default |
-|------|-------------|---------|
-| `autoUseWebp` | Specifies whether images should automatically be rendered in webp format when supported by the browser. | `true` |
-| `cache` | If specified, the [keyv cache]((https://github.com/lukechilds/keyv)) configured here is used to cache the retrieval of the original images and the transformations. | - |
-| `cors` | Any valid [CORS configuration option](https://expressjs.com/en/resources/middleware/cors.html) | - |
-| `imageAdapter` | Configures the image adapter to be used (see below). Must be specified. | - |
-| `secret` | If specified, express-sharp will validate the incoming request to verify that a valid signature has been provided. The secret is used to compute this signature. | - |
+| Name           | Description                                                                                                                                                           | Default |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `autoUseWebp`  | Specifies whether images should automatically be rendered in webp format when supported by the browser.                                                               | `true`  |
+| `cache`        | If specified, the [keyv cache](<(https://github.com/lukechilds/keyv)>) configured here is used to cache the retrieval of the original images and the transformations. | -       |
+| `cors`         | Any valid [CORS configuration option](https://expressjs.com/en/resources/middleware/cors.html)                                                                        | -       |
+| `imageAdapter` | Configures the image adapter to be used (see below). Must be specified.                                                                                               | -       |
+| `secret`       | If specified, express-sharp will validate the incoming request to verify that a valid signature has been provided. The secret is used to compute this signature.      | -       |
 
 ## Image Adapters
 
@@ -119,10 +118,14 @@ express-sharp contains the following standard image adapters.
 
 ### File System
 
+```sh
+$ npm i @edged/fs-adapter
+```
+
 With this adapter original images are loaded from the hard disk.
 
 ```js
-import { FsAdapter } from 'express-sharp'
+import { FsAdapter } from '@edged/fs-adapter'
 
 const adapter = new FsAdapter('/path/to/images')
 ```
@@ -132,11 +135,11 @@ const adapter = new FsAdapter('/path/to/images')
 Loads original images via HTTP. To use this adapter, the peer dependency `got` must be installed:
 
 ```sh
-$ yarn add got
+$ npm i @edged/http-adapter
 ```
 
 ```js
-import { HttpAdapter } from 'express-sharp'
+import { HttpAdapter } from '@edged/http-adapter'
 
 const adapter = new HttpAdapter({
   prefixUrl: 'http://localhost:3000/images',
@@ -147,14 +150,14 @@ The constructor can be passed any [got options](https://github.com/sindresorhus/
 
 ### Amazon S3
 
-Loads images from Amazon S3. To use this adapter, the peer dependency `aws-sdk` must be installed:
-
 ```sh
-$ yarn add aws-sdk
+$ npm i @edged/s3-adapter
 ```
 
+Loads images from Amazon S3.
+
 ```js
-import { S3Adapter } from 'express-sharp'
+import { S3Adapter } from '@edged/s3-adapter'
 
 const bucketName = 'my-bucketname'
 const adapter = new S3Adapter(bucketname)
@@ -166,10 +169,14 @@ The AWS SDK expects the environment variables `AWS_ACCESS_KEY_ID` and `AWS_SECRE
 
 If you needed your own adapters can be used. An "image adapter" is a class that implements the `ImageAdapter` interface:
 
-```ts
-import { ImageAdapter } from 'express-sharp'
+```sh
+npm i @edged/core
+```
 
-class MyAdapter implements ImageAdapter {
+```ts
+import { ImageAdapter } from '@edged/core'
+
+export class MyAdapter implements ImageAdapter {
   async fetch(id: string): Promise<Buffer | undefined> {
     if (imageDoesNotExist(id)) {
       return undefined
@@ -183,7 +190,6 @@ class MyAdapter implements ImageAdapter {
 ## Caching
 
 The fetching of the original images and the transformations can be cached. To enable this feature, the `cache` option must be passed to the `expressSharp` middleware. Any [keyv cache stores](https://github.com/lukechilds/keyv) can be passed.
-
 
 In-memory cache example:
 
@@ -220,7 +226,7 @@ By setting the environment variable `EXPRESS_SHARP_SIGNED_URL_SECRET` or by spec
 In order to compute the signature, the supplied client should be used:
 
 ```js
-import { createClient } from 'express-sharp'
+import { createClient } from '@edged/express-sharp'
 
 const endpoint = 'https://example.com/my-express-sharp-endpoint'
 const secret = 'test'
@@ -239,13 +245,12 @@ This project uses [debug](https://www.npmjs.com/package/debug). To display debug
 $ export DEBUG='my-app:*,express-sharp*'
 ```
 
-
 # Client integration
 
 express-sharp comes with a client that can be used to generate URLs for images.
 
 ```js
-import { createClient } from 'express-sharp'
+import { createClient } from '@edged/express-sharp'
 
 const client = createClient('http://my-base-host', 'optional secret')
 
@@ -256,15 +261,15 @@ const fooUrl = client.url(originalImageUrl, options)
 
 Currently the following transformations can be applied to images:
 
-| Client option name | Query param name | Description |
-|--------------------|------------------|-------------|
-| quality | `q` | Quality is a number between 1 and 100 (see [sharp docs](https://sharp.pixelplumbing.com/en/stable/api-output/)). |
-| width | `w` |
-| height | `h` |
-| format | `f` | Output image format. Valid values: every valid [sharp output format string](https://sharp.pixelplumbing.com/api-output#toformat), i.e. `jpeg`, `gif`, `webp` or `raw`. |
-| progressive | `p` | Only available for jpeg and png formats. Enable progressive scan by passing `true`. |
-| crop | `c` | Setting crop to `true` enables the [sharp cropping feature](https://sharp.pixelplumbing.com/api-resize#crop). Note: Both `width` and `height` params are neccessary for crop to work. Default is `false`. |
-| gravity | `g` | When the crop option is activated you can specify the gravity of the cropping. Possible attributes of the optional `gravity` are `north`, `northeast`, `east`, `southeast`, `south`, `southwest`, `west`, `northwest`, `center` and `centre`. Default is `center`. |
+| Client option name | Query param name | Description                                                                                                                                                                                                                                                        |
+| ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| quality            | `q`              | Quality is a number between 1 and 100 (see [sharp docs](https://sharp.pixelplumbing.com/en/stable/api-output/)).                                                                                                                                                   |
+| width              | `w`              |
+| height             | `h`              |
+| format             | `f`              | Output image format. Valid values: every valid [sharp output format string](https://sharp.pixelplumbing.com/api-output#toformat), i.e. `jpeg`, `gif`, `webp` or `raw`.                                                                                             |
+| progressive        | `p`              | Only available for jpeg and png formats. Enable progressive scan by passing `true`.                                                                                                                                                                                |
+| crop               | `c`              | Setting crop to `true` enables the [sharp cropping feature](https://sharp.pixelplumbing.com/api-resize#crop). Note: Both `width` and `height` params are neccessary for crop to work. Default is `false`.                                                          |
+| gravity            | `g`              | When the crop option is activated you can specify the gravity of the cropping. Possible attributes of the optional `gravity` are `north`, `northeast`, `east`, `southeast`, `south`, `southwest`, `west`, `northwest`, `center` and `centre`. Default is `center`. |
 
 # License
 
