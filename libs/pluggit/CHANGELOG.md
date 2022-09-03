@@ -1,5 +1,11 @@
 # @busse/pluggit
 
+## 2.0.3
+
+### Patch Changes
+
+- 65972ad: Fix package metadata
+
 ## 2.0.2
 
 ### Patch Changes

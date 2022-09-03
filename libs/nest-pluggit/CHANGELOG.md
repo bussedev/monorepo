@@ -1,5 +1,12 @@
 # @busse/nest-pluggit
 
+## 1.0.10
+
+### Patch Changes
+
+- Updated dependencies [65972ad]
+  - @busse/pluggit@2.0.3
+
 ## 1.0.9
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @busse/homebridge-pluggit
 
+## 1.2.4
+
+### Patch Changes
+
+- 65972ad: Fix package metadata
+- Updated dependencies [65972ad]
+  - @busse/pluggit@2.0.3
+
 ## 1.2.3
 
 ### Patch Changes
