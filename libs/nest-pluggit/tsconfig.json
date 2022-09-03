@@ -1,0 +1,22 @@
+{
+  "extends": "@busse/tsconfig",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../pluggit/tsconfig.json"
+    },
+    {
+      "path": "../testing/tsconfig.json"
+    }
+  ]
+}

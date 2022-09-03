@@ -1,0 +1,7 @@
+.pnpm-store
+pnpm-store
+node_modules
+dist
+artifacts
+temp
+pnpm-lock.yaml

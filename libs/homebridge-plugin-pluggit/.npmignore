@@ -1,0 +1,6 @@
+**
+
+# Allow files and directories
+!/dist/**/*
+!config.schema.json
+!CHANGELOG.md

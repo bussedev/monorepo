@@ -1,0 +1,5 @@
+**
+
+# Allow files and directories
+!/dist/**/*
+!CHANGELOG.md

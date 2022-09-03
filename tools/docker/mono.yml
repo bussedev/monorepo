@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  mono:
+    image: mono
+    build:
+      dockerfile: tools/docker/Dockerfile
+      context: .
+      args:
+        UID: '${USERID}'
+        GID: '${GID}'
+    user: '${UID_GID}'
+    volumes:
+      - .:/app:delegated
+      - $HOME/.gitconfig:/home/node/.gitconfig
+    environment:
+      NODE_ENV: development

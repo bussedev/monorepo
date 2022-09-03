@@ -1,0 +1,21 @@
+{
+  "extends": "@busse/tsconfig",
+  "include": [
+    "**/.eslintrc.js",
+    ".meta-updater/src/**/*.ts",
+    ".meta-updater/jest.config.ts",
+    ".meta-updater/*.mjs",
+    "**/jest.config.*",
+    "*.ts",
+    "*.js",
+    "**/*.js",
+    "**/src/**/*",
+    "**/test/**/*",
+    "**/__mocks__/**/*",
+    "**/__tests__/**/*"
+  ],
+  "exclude": ["**/dist/**"],
+  "parserOptions": {
+    "extraFileExtensions": [".mjs"]
+  }
+}

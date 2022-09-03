@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  pluggit-web:
+    extends:
+      file: tools/docker/common-services.yml
+      service: web
+    depends_on:
+      - influxdb
+      - nginx-proxy
+    environment:
+      VIRTUAL_HOST: pluggit-web.localhost
+    volumes:
+      - .:/app:delegated
+    working_dir: /app/services/pluggit/pluggit-web
+    ports:
+      - 9230:9229

@@ -1,0 +1,14 @@
+{
+  "extends": "@busse/tsconfig",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": []
+}

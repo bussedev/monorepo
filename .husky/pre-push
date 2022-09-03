@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname $0)/_/husky.sh"
+
+echo Checking lockfile ...
+pnpm i --frozen-lockfile
+
+echo Run other hooks ...
+pnpm run test:changed

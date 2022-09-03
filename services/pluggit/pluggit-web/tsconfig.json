@@ -1,0 +1,23 @@
+{
+  "extends": "@busse/tsconfig",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../../../libs/nest-pluggit/tsconfig.json"
+    },
+    {
+      "path": "../../../libs/pluggit/tsconfig.json"
+    }
+  ]
+}

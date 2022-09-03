@@ -1,0 +1,25 @@
+{
+  "name": "@busse/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc",
+  "author": "Philipp Busse",
+  "engines": {
+    "node": ">=16.13.0",
+    "pnpm": ">=6.19.0"
+  },
+  "scripts": {
+    "lint": "true",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "test": "true"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@heise/eslint-config": "^20.0.33",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "devDependencies": {
+    "@busse/jest-config": "workspace:*"
+  },
+  "private": true
+}

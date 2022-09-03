@@ -1,0 +1,29 @@
+# https://stackoverflow.com/questions/49939960/docker-copy-files-using-glob-pattern
+
+
+FROM node:lts-alpine
+
+WORKDIR /build
+
+RUN  npm i -g pnpm && pnpm config set store-dir .pnpm-store
+
+COPY .meta-updater/package.json  .meta-updater/package.json
+COPY .npmrc package.json pnpm-lock.yaml pnpm-workspace.yaml .pnpmfile.cjs .
+COPY libs/common/package.json  libs/common/package.json
+COPY libs/homebridge-plugin-pluggit/package.json  libs/homebridge-plugin-pluggit/package.json
+COPY libs/nest-pluggit/package.json  libs/nest-pluggit/package.json
+COPY libs/net-scan/package.json  libs/net-scan/package.json
+COPY libs/pluggit/package.json  libs/pluggit/package.json
+COPY libs/testing/package.json  libs/testing/package.json
+COPY services/pluggit/pluggit-collector/package.json  services/pluggit/pluggit-collector/package.json
+COPY services/pluggit/pluggit-web/package.json  services/pluggit/pluggit-web/package.json
+COPY tools/create-package/package.json  tools/create-package/package.json
+COPY tools/eslint/package.json  tools/eslint/package.json
+COPY tools/jest-config/package.json  tools/jest-config/package.json
+COPY tools/tsconfig/package.json  tools/tsconfig/package.json
+
+RUN pnpm i
+
+COPY . .
+
+RUN pnpm -r exec rm -fr node_modules && rm -fr node_modules && rm -fr ~/.{cache,local,npm}

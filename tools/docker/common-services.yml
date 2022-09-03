@@ -1,0 +1,26 @@
+version: '3.9'
+
+x-volumes: &vol
+  - .:/app:delegated
+  - $HOME/.gitconfig:/home/node/.gitconfig
+
+services:
+  web:
+    image: mono
+    ports:
+      - '8080'
+    environment:
+      LOG_LEVEL: ${LOG_LEVEL:-debug}
+      NODE_OPTIONS: --enable-source-maps
+      PORT: 8080
+      VIRTUAL_PORT: 8080
+    user: '${UID_GID}'
+    volumes:
+      - .:/app:delegated
+    command: pnpm start:dev
+    healthcheck:
+      test:
+        [
+          'CMD-SHELL',
+          'wget --no-verbose --tries=1 --spider http://localhost:8080/health || exit 1',
+        ]

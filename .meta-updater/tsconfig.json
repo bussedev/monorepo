@@ -1,0 +1,12 @@
+{
+  "extends": "@busse/tsconfig",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "module": "ES2020"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "references": []
+}

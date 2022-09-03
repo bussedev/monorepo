@@ -1,0 +1,3 @@
+#!/bin/sh
+
+kubectl --context home -n pluggit --selector=app.kubernetes.io/instance=main-web   logs --all-containers "$@" | pino-pretty

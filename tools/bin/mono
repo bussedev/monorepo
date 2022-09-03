@@ -1,0 +1,17 @@
+#!/bin/bash
+
+PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../.. >/dev/null && pwd )"
+
+# TODO:
+# rush list --json
+
+COMPOSE="docker-compose \
+  -f docker-compose.yml \
+  -f services/pluggit/pluggit-collector/docker-compose.yml \
+  -f services/pluggit/pluggit-web/docker-compose.yml \
+  -f tools/docker/mono.yml \
+  -f tools/docker/nginx-proxy.yml
+"
+
+cd "$PROJECT_ROOT"
+USERID="$(id -u)" GID="$(id -g)" UID_GID="$(id -u):$(id -g)" $COMPOSE "$@"

@@ -1,0 +1,8 @@
+!.meta-updater
+.pnpm-store
+**/bin/main.js
+**/dist
+**/node_modules
+pnpm-store
+tools/create-package/templates
+tools/eslint/.eslintrc.js

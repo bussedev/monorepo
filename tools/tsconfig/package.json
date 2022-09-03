@@ -1,0 +1,18 @@
+{
+  "name": "@busse/tsconfig",
+  "version": "1.0.1",
+  "private": true,
+  "description": "",
+  "main": "tsconfig.json",
+  "author": "Philipp Busse",
+  "engines": {
+    "node": ">=16.13.0",
+    "pnpm": ">=6.19.0"
+  },
+  "scripts": {
+    "lint": "true",
+    "test": "true",
+    "clean": "rimraf dist *.tsbuildinfo"
+  },
+  "license": "UNLICENSED"
+}

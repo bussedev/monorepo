@@ -1,0 +1,6 @@
+{
+  "extends": "@busse",
+  "rules": {
+    "no-console": "off"
+  }
+}

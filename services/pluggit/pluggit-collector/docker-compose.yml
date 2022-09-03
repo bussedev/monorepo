@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    depends_on:
+      - nginx-proxy
+    environment:
+      VIRTUAL_HOST: grafana.localhost
+      VIRTUAL_PORT: 3000
+    volumes:
+      # - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - grafana_data:/var/lib/grafana
+
+  influxdb:
+    image: influxdb:latest
+    ports:
+      - '8083:8083'
+      - '8086:8086'
+      - '8090:8090'
+      - '2003:2003'
+    environment:
+      VIRTUAL_HOST: influxdb.localhost
+      VIRTUAL_PORT: 8086
+    volumes:
+      - influx_data:/var/lib/influxdb
+
+  pluggit-collector:
+    extends:
+      file: tools/docker/common-services.yml
+      service: web
+    depends_on:
+      - influxdb
+      - nginx-proxy
+    environment:
+      VIRTUAL_HOST: pluggit-collector.localhost
+    volumes:
+      - .:/app:delegated
+    working_dir: /app/services/pluggit/pluggit-collector
+    ports:
+      - 9229:9229
+
+volumes:
+  grafana_data:
+  influx_data:

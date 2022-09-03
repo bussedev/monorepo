@@ -1,0 +1,19 @@
+{
+  "pluginAlias": "Pluggit",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "This is a [Homebridge](https://homebridge.io/) plugin that can be used to control [Pluggit ventilation units](https://www.pluggit.com/portal/en/products-functions/range-of-products/ventilation-units-1984).",
+  "footerDisplay": "For more information, see the [plugin homepage](https://www.npmjs.com/package/@busse/homebridge-pluggit).",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "address": {
+        "title": "IP or network address",
+        "type": "string",
+        "placeholder": "e.g. 192.168.0.123 or 192.168.0.0/24",
+        "description": "To activate the plugin, either an IP or a network address must be specified.",
+        "required": true
+      }
+    }
+  }
+}
