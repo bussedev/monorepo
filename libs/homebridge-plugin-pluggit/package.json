@@ -55,7 +55,8 @@
     "homebridge": "^1.5.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "config.schema.json"
   ],
   "bugs": {
     "url": "https://github.com/bussedev/monorepo/issues"
