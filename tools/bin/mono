@@ -2,9 +2,6 @@
 
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../.. >/dev/null && pwd )"
 
-# TODO:
-# rush list --json
-
 COMPOSE="docker-compose \
   -f docker-compose.yml \
   -f services/pluggit/pluggit-collector/docker-compose.yml \
