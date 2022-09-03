@@ -1,5 +1,6 @@
 {
   "name": "@busse/pluggit",
+  "description": "A client for Pluggit AP 190/310/460 ventilation units",
   "version": "2.0.2",
   "license": "MIT",
   "main": "dist/index",
@@ -24,6 +25,12 @@
     "jest-junit": "^13.2.0",
     "typescript": "^4.8.2"
   },
+  "keywords": [
+    "Pluggit",
+    "AP190",
+    "AP310",
+    "AP460"
+  ],
   "engines": {
     "node": ">=16.13.0",
     "pnpm": ">=6.19.0"

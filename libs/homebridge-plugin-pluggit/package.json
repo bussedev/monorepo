@@ -4,6 +4,7 @@
   "version": "1.2.3",
   "license": "MIT",
   "main": "dist/index",
+  "description": "Homebridge plugin for Pluggit AP190/AP310/AP460 ventilation units",
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
     "start:dev": "UIX_USE_PNPM=1 tsc-watch  --build tsconfig.build.json --onSuccess 'pnpm homebridge -IDCP .'",
@@ -20,6 +21,7 @@
   ],
   "keywords": [
     "homebridge-plugin",
+    "Pluggit",
     "AP190",
     "AP310",
     "AP460"
