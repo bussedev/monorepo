@@ -3,6 +3,7 @@
 set -e
 
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../.. >/dev/null && pwd )"
+cd "$PROJECT_ROOT"
 
 SERVICE_FILES=$(for file in $(git ls-files services | grep compose); do echo -f $file; done)
 
@@ -13,5 +14,4 @@ COMPOSE="docker-compose \
   -f tools/docker/nginx-proxy.yml
 "
 
-cd "$PROJECT_ROOT"
 USERID="$(id -u)" GID="$(id -g)" UID_GID="$(id -u):$(id -g)" $COMPOSE "$@"
