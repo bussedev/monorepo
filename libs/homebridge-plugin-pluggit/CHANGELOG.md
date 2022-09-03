@@ -1,5 +1,11 @@
 # @busse/homebridge-pluggit
 
+## 1.2.6
+
+### Patch Changes
+
+- 341c4c9: include config schema
+
 ## 1.2.5
 
 ### Patch Changes
