@@ -1,5 +1,11 @@
 # @edged/core
 
+## 1.0.4
+
+### Patch Changes
+
+- 830dc30: fix publish
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@edged/express-sharp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Real-time image processing for your express application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,5 +1,12 @@
 # @edged/client
 
+## 1.0.4
+
+### Patch Changes
+
+- @edged/common@1.0.4
+- @edged/config@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

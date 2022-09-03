@@ -1,5 +1,12 @@
 # @edged/s3-adapter
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [830dc30]
+  - @edged/core@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

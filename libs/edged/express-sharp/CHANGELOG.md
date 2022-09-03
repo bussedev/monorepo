@@ -1,5 +1,16 @@
 # @edged/express-sharp
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [830dc30]
+  - @edged/core@1.0.4
+  - @edged/fs-adapter@1.0.4
+  - @edged/common@1.0.4
+  - @edged/config@1.0.4
+  - @edged/client@1.0.4
+
 ## 1.0.2
 
 ### Patch Changes
