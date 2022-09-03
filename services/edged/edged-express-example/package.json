@@ -1,0 +1,54 @@
+{
+  "bin": "bin/main.js",
+  "name": "@edged/express-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "build:docker": "pnpm run build && pkg -t alpine-x64 --compress GZip dist/main.js && docker build -t test .",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "start:dev": "DEBUG=express-sharp* tsc-watch  --build tsconfig.build.json --onSuccess 'node --inspect=0.0.0.0:9229 --enable-source-maps dist/main' --preserveWatchOutput",
+    "lint": "eslint --cache ./src --ignore-path ../../../.eslintignore",
+    "test": "jest --passWithNoTests",
+    "build:pkg": "pkg --options 'max-old-space-size=350' --compress GZip -o .build/main .",
+    "docker:build": "pnpm run build && pnpm run build:pkg && docker build --network host -t edged/express-example -f ../../../Dockerfile2 .",
+    "docker:publish": "echo publish"
+  },
+  "author": "Philipp Busse",
+  "license": "MIT",
+  "dependencies": {
+    "@edged/express-sharp": "workspace:*",
+    "@edged/http-adapter": "workspace:*",
+    "@edged/s3-adapter": "workspace:*",
+    "express": "^4.17.1",
+    "keyv": "^4.5.0",
+    "pkg": "^5.8.0",
+    "pug": "^3.0.2",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@busse/tsconfig": "workspace:*"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16.13.0",
+    "pnpm": ">=6.19.0"
+  },
+  "bugs": {
+    "url": "https://github.com/bussedev/monorepo/issues"
+  },
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/services/edged/edged-express-example#readme",
+  "repository": {
+    "url": "git@github.com:bussedev/monorepo.git"
+  },
+  "private": true,
+  "pkg": {
+    "targets": [
+      "node16-alpine"
+    ],
+    "outputPath": ".build"
+  }
+}

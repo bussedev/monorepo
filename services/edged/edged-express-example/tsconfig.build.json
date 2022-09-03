@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../../../libs/edged/adapters/http-adapter/tsconfig.build.json"
+    },
+    {
+      "path": "../../../libs/edged/adapters/s3-adapter/tsconfig.build.json"
+    },
+    {
+      "path": "../../../libs/edged/express-sharp/tsconfig.build.json"
+    }
+  ]
+}

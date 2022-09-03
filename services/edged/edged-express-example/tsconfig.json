@@ -1,0 +1,28 @@
+{
+  "extends": "@busse/tsconfig",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "src"
+  },
+  "include": [
+    "src/**/*",
+    "__tests__/**/*",
+    "example/**/*",
+    "__mocks__/**/*"
+  ],
+  "references": [
+    {
+      "path": "../../../libs/edged/adapters/http-adapter/tsconfig.json"
+    },
+    {
+      "path": "../../../libs/edged/adapters/s3-adapter/tsconfig.json"
+    },
+    {
+      "path": "../../../libs/edged/express-sharp/tsconfig.json"
+    }
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

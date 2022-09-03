@@ -39,10 +39,10 @@ export class MetaUpdaterRunner {
         dir: string,
         manifest: ProjectManifest,
       ): Promise<unknown> => {
-        console.log(`Meta update for ${manifest.name || dir}`, {
-          Updater: updater.constructor.name,
-          File: `${dir}/${updater.key}`,
-        })
+        // console.log(`Meta update for ${manifest.name || dir}`, {
+        //   Updater: updater.constructor.name,
+        //   File: `${dir}/${updater.key}`,
+        // })
         try {
           const context = await updater.update({
             workspaceDir,
@@ -83,27 +83,9 @@ export abstract class MetaUpdater<T = MetaUpdaterData> {
   protected getProjectType(
     context: MetaUpdaterContext<T>,
   ): 'service' | 'cli' | 'lib' | 'unknown' {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    switch (context.manifest.config?.type) {
-      case 'service': {
-        return 'service'
-      }
-      case 'lib': {
-        return 'lib'
-      }
-      case 'cli': {
-        return 'cli'
-      }
-      case undefined:
-      default: {
-        // ToDo: Sobald überall config.type angegeben ist, entfällt das hier
-        if (!context.manifest.scripts?.start) {
-          return 'lib'
-        }
-        return 'unknown'
-      }
-    }
+    return existsSync(path.join(context.dir, 'src', 'main.ts'))
+      ? 'service'
+      : 'lib'
   }
 
   protected isServiceProject(context: MetaUpdaterContext<T>): boolean {
@@ -207,6 +189,9 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     context.data = {
       bin: 'bin/main.js',
       ...context.data,
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      private: true,
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
