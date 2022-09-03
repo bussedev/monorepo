@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository:ghcr.io/v2/bussedev/pluggit-collector
+  repository:ghcr.io/bussedev/pluggit-collector
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ''

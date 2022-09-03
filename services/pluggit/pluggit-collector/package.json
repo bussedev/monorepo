@@ -17,7 +17,7 @@
     "clean": "rimraf dist *.tsbuildinfo",
     "lint": "eslint --cache ./src --report-unused-disable-directives --ignore-path ../../../.eslintignore",
     "build:pkg": "pkg --options 'max-old-space-size=350' --compress GZip  --no-bytecode --public-packages '*' --public -o .build/main .",
-    "docker:build": "docker build -t ghcr.io/v2/bussedev/pluggit-collector -f ../../../Dockerfile .",
+    "docker:build": "docker build -t ghcr.io/bussedev/pluggit-collector -f ../../../Dockerfile .",
     "docker:publish": "../../../docker-publish.sh"
   },
   "dependencies": {
