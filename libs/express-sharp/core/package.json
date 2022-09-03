@@ -1,5 +1,5 @@
 {
-  "name": "@edged/core",
+  "name": "@express-sharp/core",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

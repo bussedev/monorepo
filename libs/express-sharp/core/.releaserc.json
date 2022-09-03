@@ -1,1 +1,3 @@
-{"tagFormat":"@edged/core@v${version}"}
+{
+  "tagFormat": "@express-sharp/core@v${version}"
+}

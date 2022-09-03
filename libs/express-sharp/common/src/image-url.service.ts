@@ -1,5 +1,5 @@
-import { ConfigService } from '@edged/config'
-import { QueryParams, Signer } from '@edged/core'
+import { ConfigService } from '@express-sharp/config'
+import { QueryParams, Signer } from '@express-sharp/core'
 import { inject, injectable } from 'tsyringe'
 import { URL } from 'url'
 import { ResizeDto } from './resize.dto'

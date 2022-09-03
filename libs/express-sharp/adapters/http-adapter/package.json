@@ -1,11 +1,11 @@
 {
-  "name": "@edged/http-adapter",
+  "name": "@express-sharp/http-adapter",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@edged/core": "workspace:*",
+    "@express-sharp/core": "workspace:*",
     "axios": "^0.27.2",
     "http-status": "^1.5.0",
     "tslib": "^2.4.0"

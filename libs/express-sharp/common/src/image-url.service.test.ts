@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 
-import { ConfigService } from '@edged/config'
+import { ConfigService } from '@express-sharp/config'
 import { container } from 'tsyringe'
 import { ImageUrl } from './image-url.service'
 

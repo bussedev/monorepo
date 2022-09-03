@@ -1,1 +1,3 @@
-{"tagFormat":"@edged/config@v${version}"}
+{
+  "tagFormat": "@express-sharp/config@v${version}"
+}

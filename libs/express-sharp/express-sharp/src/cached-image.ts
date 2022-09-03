@@ -1,4 +1,4 @@
-import { getLogger, ImageAdapter } from '@edged/core'
+import { getLogger, ImageAdapter } from '@express-sharp/core'
 import Keyv from 'keyv'
 import { singleton } from 'tsyringe'
 

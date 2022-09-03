@@ -1,1 +1,3 @@
-{"tagFormat":"@edged/http-adapter@v${version}"}
+{
+  "tagFormat": "@express-sharp/http-adapter@v${version}"
+}

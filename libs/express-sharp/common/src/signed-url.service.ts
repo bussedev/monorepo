@@ -1,4 +1,4 @@
-import { ConfigService } from '@edged/config'
+import { ConfigService } from '@express-sharp/config'
 import crypto from 'crypto'
 import { injectable } from 'tsyringe'
 import { URL } from 'url'

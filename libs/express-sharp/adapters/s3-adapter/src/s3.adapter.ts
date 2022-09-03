@@ -1,4 +1,4 @@
-import { getLogger, ImageAdapter } from '@edged/core'
+import { getLogger, ImageAdapter } from '@express-sharp/core'
 import { S3 } from 'aws-sdk'
 
 export class S3Adapter implements ImageAdapter {

@@ -1,1 +1,3 @@
-{"tagFormat":"@edged/fs-adapter@v${version}"}
+{
+  "tagFormat": "@express-sharp/fs-adapter@v${version}"
+}

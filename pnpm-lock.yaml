@@ -171,12 +171,12 @@ importers:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
-      '@edged/core': workspace:*
+      '@express-sharp/core': workspace:*
       jest: ^29.0.1
       ts-jest: ^28.0.8
       tslib: ^2.4.0
     dependencies:
-      '@edged/core': link:../../core
+      '@express-sharp/core': link:../../core
       tslib: 2.4.0
     devDependencies:
       '@busse/jest-config': link:../../../../tools/jest-config
@@ -188,11 +188,11 @@ importers:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
-      '@edged/core': workspace:*
+      '@express-sharp/core': workspace:*
       http-status: ^1.5.0
       tslib: ^2.4.0
     dependencies:
-      '@edged/core': link:../../core
+      '@express-sharp/core': link:../../core
       http-status: 1.5.2
       tslib: 2.4.0
     devDependencies:
@@ -202,11 +202,11 @@ importers:
   libs/express-sharp/adapters/s3-adapter:
     specifiers:
       '@busse/tsconfig': workspace:*
-      '@edged/core': workspace:*
+      '@express-sharp/core': workspace:*
       aws-sdk: ^2.987.0
       tslib: ^2.4.0
     dependencies:
-      '@edged/core': link:../../core
+      '@express-sharp/core': link:../../core
       aws-sdk: 2.1209.0
       tslib: 2.4.0
     devDependencies:
@@ -216,14 +216,14 @@ importers:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
-      '@edged/common': workspace:*
-      '@edged/config': workspace:*
+      '@express-sharp/common': workspace:*
+      '@express-sharp/config': workspace:*
       rimraf: ^3.0.2
       tslib: ^2.4.0
       tsyringe: ^4.6.0
     dependencies:
-      '@edged/common': link:../common
-      '@edged/config': link:../config
+      '@express-sharp/common': link:../common
+      '@express-sharp/config': link:../config
       tslib: 2.4.0
       tsyringe: 4.7.0
     devDependencies:
@@ -235,14 +235,14 @@ importers:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
-      '@edged/config': workspace:*
-      '@edged/core': workspace:*
+      '@express-sharp/config': workspace:*
+      '@express-sharp/core': workspace:*
       '@types/sharp': ^0.30.5
       tslib: ^2.4.0
       tsyringe: ^4.6.0
     dependencies:
-      '@edged/config': link:../config
-      '@edged/core': link:../core
+      '@express-sharp/config': link:../config
+      '@express-sharp/core': link:../core
       tslib: 2.4.0
       tsyringe: 4.7.0
     devDependencies:
@@ -254,13 +254,13 @@ importers:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
-      '@edged/core': workspace:*
+      '@express-sharp/core': workspace:*
       dotenv: ^16.0.2
       rimraf: ^3.0.2
       tslib: ^2.4.0
       tsyringe: ^4.7.0
     dependencies:
-      '@edged/core': link:../core
+      '@express-sharp/core': link:../core
       dotenv: 16.0.2
       tslib: 2.4.0
       tsyringe: 4.7.0
@@ -290,12 +290,12 @@ importers:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
-      '@edged/client': workspace:*
-      '@edged/common': workspace:*
-      '@edged/config': workspace:*
-      '@edged/core': workspace:*
-      '@edged/fs-adapter': workspace:*
-      '@edged/http-adapter': workspace:*
+      '@express-sharp/client': workspace:*
+      '@express-sharp/common': workspace:*
+      '@express-sharp/config': workspace:*
+      '@express-sharp/core': workspace:*
+      '@express-sharp/fs-adapter': workspace:*
+      '@express-sharp/http-adapter': workspace:*
       '@keyv/redis': ^2.1.2
       '@types/cors': ^2.8.12
       '@types/debug': ^4.1.7
@@ -314,11 +314,11 @@ importers:
       tslib: ^2.4.0
       tsyringe: ^4.6.0
     dependencies:
-      '@edged/client': link:../client
-      '@edged/common': link:../common
-      '@edged/config': link:../config
-      '@edged/core': link:../core
-      '@edged/fs-adapter': link:../adapters/fs-adapter
+      '@express-sharp/client': link:../client
+      '@express-sharp/common': link:../common
+      '@express-sharp/config': link:../config
+      '@express-sharp/core': link:../core
+      '@express-sharp/fs-adapter': link:../adapters/fs-adapter
       cors: 2.8.5
       debug: 4.3.4
       etag: 1.8.1
@@ -328,7 +328,7 @@ importers:
     devDependencies:
       '@busse/jest-config': link:../../../tools/jest-config
       '@busse/tsconfig': link:../../../tools/tsconfig
-      '@edged/http-adapter': link:../adapters/http-adapter
+      '@express-sharp/http-adapter': link:../adapters/http-adapter
       '@keyv/redis': 2.5.0
       '@types/cors': 2.8.12
       '@types/debug': 4.1.7

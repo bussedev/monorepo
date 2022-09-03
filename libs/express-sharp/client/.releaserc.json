@@ -1,1 +1,3 @@
-{"tagFormat":"@edged/client@v${version}"}
+{
+  "tagFormat": "@express-sharp/client@v${version}"
+}

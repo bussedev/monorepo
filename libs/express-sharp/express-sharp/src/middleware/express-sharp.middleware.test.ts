@@ -1,7 +1,7 @@
 import 'reflect-metadata'
 
-import { ConfigService } from '@edged/config'
-import { HttpAdapter } from '@edged/http-adapter'
+import { ConfigService } from '@express-sharp/config'
+import { HttpAdapter } from '@express-sharp/http-adapter'
 import { Router } from 'express'
 import Keyv from 'keyv'
 import { container } from 'tsyringe'

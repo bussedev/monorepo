@@ -1,1 +1,3 @@
-{"tagFormat":"@edged/s3-adapter@v${version}"}
+{
+  "tagFormat": "@express-sharp/s3-adapter@v${version}"
+}

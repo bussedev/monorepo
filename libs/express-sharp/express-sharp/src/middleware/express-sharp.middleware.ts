@@ -1,6 +1,6 @@
-import { ResizeDto } from '@edged/common'
-import { ConfigService } from '@edged/config'
-import { ExpressSharpOptions } from '@edged/core'
+import { ResizeDto } from '@express-sharp/common'
+import { ConfigService } from '@express-sharp/config'
+import { ExpressSharpOptions } from '@express-sharp/core'
 import cors from 'cors'
 import {
   NextFunction,

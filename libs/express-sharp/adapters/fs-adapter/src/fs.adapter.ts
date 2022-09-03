@@ -1,4 +1,4 @@
-import { getLogger, ImageAdapter } from '@edged/core'
+import { getLogger, ImageAdapter } from '@express-sharp/core'
 import { promises as fs } from 'fs'
 import path_ from 'path'
 

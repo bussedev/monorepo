@@ -1,5 +1,5 @@
-import { ResizeDto } from '@edged/common'
-import { format, getLogger, ImageAdapter, Result } from '@edged/core'
+import { ResizeDto } from '@express-sharp/common'
+import { format, getLogger, ImageAdapter, Result } from '@express-sharp/core'
 import Keyv from 'keyv'
 import sharp from 'sharp'
 import { singleton } from 'tsyringe'

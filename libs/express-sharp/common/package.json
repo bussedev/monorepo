@@ -1,12 +1,12 @@
 {
-  "name": "@edged/common",
+  "name": "@express-sharp/common",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@edged/config": "workspace:*",
-    "@edged/core": "workspace:*",
+    "@express-sharp/config": "workspace:*",
+    "@express-sharp/core": "workspace:*",
     "class-validator": "^0.13.2",
     "reflect-metadata": "^0.1.13",
     "tslib": "^2.4.0",
