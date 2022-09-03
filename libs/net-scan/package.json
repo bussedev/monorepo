@@ -1,7 +1,7 @@
 {
   "name": "@busse/net-scan",
   "description": "Find devices on the local network that have a specific port open",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "dist/index",
   "scripts": {

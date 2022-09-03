@@ -1,5 +1,14 @@
 # @busse/homebridge-pluggit
 
+## 1.2.3
+
+### Patch Changes
+
+- 1edb409: Packages are now on Github
+- Updated dependencies [1edb409]
+  - @busse/net-scan@1.0.2
+  - @busse/pluggit@2.0.2
+
 ## 1.2.2
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @busse/nest-pluggit-web
 
+## 1.0.9
+
+### Patch Changes
+
+- 1edb409: Packages are now on Github
+- Updated dependencies [1edb409]
+  - @busse/nest-pluggit@1.0.9
+  - @busse/pluggit@2.0.2
+
 ## 1.0.8
 
 ### Patch Changes

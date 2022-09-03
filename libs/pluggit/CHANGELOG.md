@@ -1,5 +1,11 @@
 # @busse/pluggit
 
+## 2.0.2
+
+### Patch Changes
+
+- 1edb409: Packages are now on Github
+
 ## 2.0.1
 
 ### Patch Changes
