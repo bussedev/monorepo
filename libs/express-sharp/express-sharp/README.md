@@ -57,7 +57,9 @@ Example _app.js_ (See also `example/app.ts` in this project):
 
 ```js
 import express from 'express'
-import { expressSharp, FsAdapter, HttpAdapter } from '@edged/express-sharp'
+import { expressSharp } from '@edged/express-sharp'
+import { HttpAdapter } from '@edged/http-adapter'
+import { FsAdapter } from '@edged/fs-adapter'
 
 const app = express()
 
