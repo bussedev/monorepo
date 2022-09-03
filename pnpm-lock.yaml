@@ -167,7 +167,7 @@ importers:
       ts-node: 10.9.1_k4m67i54oqq6kg4uyvjajljdr4
       typescript: 4.8.2
 
-  libs/express-sharp/adapters/fs-adapter:
+  libs/edged/adapters/fs-adapter:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
@@ -184,7 +184,7 @@ importers:
       jest: 29.0.1
       ts-jest: 28.0.8_jest@29.0.1
 
-  libs/express-sharp/adapters/http-adapter:
+  libs/edged/adapters/http-adapter:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
@@ -199,7 +199,7 @@ importers:
       '@busse/jest-config': link:../../../../tools/jest-config
       '@busse/tsconfig': link:../../../../tools/tsconfig
 
-  libs/express-sharp/adapters/s3-adapter:
+  libs/edged/adapters/s3-adapter:
     specifiers:
       '@busse/tsconfig': workspace:*
       '@edged/core': workspace:*
@@ -212,7 +212,7 @@ importers:
     devDependencies:
       '@busse/tsconfig': link:../../../../tools/tsconfig
 
-  libs/express-sharp/client:
+  libs/edged/client:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
@@ -231,7 +231,7 @@ importers:
       '@busse/tsconfig': link:../../../tools/tsconfig
       rimraf: 3.0.2
 
-  libs/express-sharp/common:
+  libs/edged/common:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
@@ -250,7 +250,7 @@ importers:
       '@busse/tsconfig': link:../../../tools/tsconfig
       '@types/sharp': 0.30.5
 
-  libs/express-sharp/config:
+  libs/edged/config:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
@@ -269,7 +269,7 @@ importers:
       '@busse/tsconfig': link:../../../tools/tsconfig
       rimraf: 3.0.2
 
-  libs/express-sharp/core:
+  libs/edged/core:
     specifiers:
       '@busse/tsconfig': workspace:*
       '@types/cors': ^2.8.12
@@ -286,7 +286,7 @@ importers:
       '@types/cors': 2.8.12
       '@types/debug': 4.1.7
 
-  libs/express-sharp/express-sharp:
+  libs/edged/express-sharp:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/tsconfig': workspace:*
@@ -5574,6 +5574,7 @@ packages:
       string.prototype.trimend: 1.0.5
       string.prototype.trimstart: 1.0.5
       unbox-primitive: 1.0.2
+    dev: true
 
   /es-abstract/1.20.2:
     resolution: {integrity: sha512-XxXQuVNrySBNlEkTYJoDNFe5+s2yIOpzq80sUHEdPdQr0S5nTLz4ZPPPswNIpKseDDUS5yghX1gfLIHQZ1iNuQ==}
@@ -6528,7 +6529,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
-      es-abstract: 1.20.1
+      es-abstract: 1.20.2
       functions-have-names: 1.2.3
 
   /functional-red-black-tree/1.0.1:
@@ -9318,6 +9319,7 @@ packages:
       define-properties: 1.1.4
       has-symbols: 1.0.3
       object-keys: 1.1.1
+    dev: true
 
   /object.assign/4.1.4:
     resolution: {integrity: sha512-1mxKf0e58bvyjSCtKYY4sRe9itRk3PJpquJOjeIkz885CczcI4IvJJDLPS72oowuSh+pBxUFROpX+TU++hxhZQ==}
@@ -10966,14 +10968,14 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
-      es-abstract: 1.20.1
+      es-abstract: 1.20.2
 
   /string.prototype.trimstart/1.0.5:
     resolution: {integrity: sha512-THx16TJCGlsN0o6dl2o6ncWUsdgnLRSA23rRE5pyGBw/mLr3Ej/R2LaqCtgP8VNMGZsvMWnf9ooZPyY2bHvUFg==}
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
-      es-abstract: 1.20.1
+      es-abstract: 1.20.2
 
   /string_decoder/1.1.1:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}

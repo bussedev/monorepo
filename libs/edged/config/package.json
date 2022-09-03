@@ -1,23 +1,24 @@
 {
-  "name": "@edged/http-adapter",
+  "name": "@edged/config",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
     "@edged/core": "workspace:*",
-    "axios": "^0.27.2",
-    "http-status": "^1.5.0",
-    "tslib": "^2.4.0"
+    "dotenv": "^16.0.2",
+    "tslib": "^2.4.0",
+    "tsyringe": "^4.7.0"
   },
   "devDependencies": {
     "@busse/jest-config": "workspace:*",
-    "@busse/tsconfig": "workspace:*"
+    "@busse/tsconfig": "workspace:*",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
     "clean": "rimraf dist *.tsbuildinfo",
-    "start:example": "DEBUG=express-sharp* nodemon --exec 'node -r ts-node/register' -w . --inspect example/app.ts",
     "lint": "eslint --cache .",
     "test": "jest",
     "ci:test": "jest --coverage"
@@ -41,5 +42,5 @@
   "bugs": {
     "url": "https://github.com/bussedev/monorepo/issues"
   },
-  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/express-sharp/adapters/http-adapter"
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/config"
 }

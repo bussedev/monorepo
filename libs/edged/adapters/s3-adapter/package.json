@@ -1,22 +1,21 @@
 {
-  "name": "@edged/core",
+  "name": "@edged/s3-adapter",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "debug": "^4.3.2",
-    "keyv": "^4.0.3",
+    "@edged/core": "workspace:*",
+    "aws-sdk": "^2.987.0",
     "tslib": "^2.4.0"
   },
   "devDependencies": {
-    "@busse/tsconfig": "workspace:*",
-    "@types/cors": "^2.8.12",
-    "@types/debug": "^4.1.7"
+    "@busse/tsconfig": "workspace:*"
   },
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
     "clean": "rimraf dist *.tsbuildinfo",
+    "start:example": "DEBUG=express-sharp* nodemon --exec 'node -r ts-node/register' -w . --inspect example/app.ts",
     "lint": "eslint --cache .",
     "test": "jest",
     "ci:test": "jest --coverage"
@@ -40,5 +39,5 @@
   "bugs": {
     "url": "https://github.com/bussedev/monorepo/issues"
   },
-  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/express-sharp/core"
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/adapters/s3-adapter"
 }

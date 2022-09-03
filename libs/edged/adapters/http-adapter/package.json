@@ -1,15 +1,17 @@
 {
-  "name": "@edged/s3-adapter",
+  "name": "@edged/http-adapter",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
     "@edged/core": "workspace:*",
-    "aws-sdk": "^2.987.0",
+    "axios": "^0.27.2",
+    "http-status": "^1.5.0",
     "tslib": "^2.4.0"
   },
   "devDependencies": {
+    "@busse/jest-config": "workspace:*",
     "@busse/tsconfig": "workspace:*"
   },
   "scripts": {
@@ -39,5 +41,5 @@
   "bugs": {
     "url": "https://github.com/bussedev/monorepo/issues"
   },
-  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/express-sharp/adapters/s3-adapter"
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/adapters/http-adapter"
 }

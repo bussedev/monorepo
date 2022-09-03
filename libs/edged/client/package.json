@@ -1,19 +1,18 @@
 {
-  "name": "@edged/config",
+  "name": "@edged/client",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@edged/core": "workspace:*",
-    "dotenv": "^16.0.2",
+    "@edged/common": "workspace:*",
+    "@edged/config": "workspace:*",
     "tslib": "^2.4.0",
-    "tsyringe": "^4.7.0"
+    "tsyringe": "^4.6.0"
   },
   "devDependencies": {
     "@busse/jest-config": "workspace:*",
     "@busse/tsconfig": "workspace:*",
-    "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2"
   },
   "scripts": {
@@ -42,5 +41,5 @@
   "bugs": {
     "url": "https://github.com/bussedev/monorepo/issues"
   },
-  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/express-sharp/config"
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/client"
 }
