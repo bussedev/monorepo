@@ -18,7 +18,7 @@
     "l": "pnpm ls -r --depth -1 --parseable",
     "reset": "pnpm clean && rm -fr node_modules/ && pnpm -r exec rm -fr node_modules && pnpm i && pnpm build",
     "dep:fix": "syncpack fix-mismatches",
-    "release": "pnpm -r publish --access=public"
+    "release": "pnpm build && pnpm -r publish --access=public"
   },
   "private": true,
   "devDependencies": {
