@@ -60,6 +60,9 @@
     "image",
     "scale"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "Philipp Busse",
   "license": "MIT",
   "bugs": {

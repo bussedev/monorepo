@@ -39,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/bussedev/monorepo/issues"
   },
-  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/adapters/s3-adapter"
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/adapters/s3-adapter",
+  "files": [
+    "dist"
+  ]
 }

@@ -127,6 +127,7 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     return 'package.json'
   }
 
+  // eslint-disable-next-line sonarjs/cognitive-complexity
   update(
     context: MetaUpdaterContext<PackageManifest>,
   ): MetaUpdaterContext<PackageManifest> {
@@ -135,6 +136,15 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     }
 
     this.updateGeneral(context)
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    if (!(context.manifest.private ?? false) && !context.manifest.files) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      context.manifest.files = context.manifest.files ?? ['dist']
+    }
 
     if (this.isLibProject(context)) {
       this.updateLib(context)

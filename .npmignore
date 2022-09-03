@@ -1,9 +1,0 @@
-# Ignore everything
-# Certain files are always included:
-# package.json
-# README
-# CHANGES / CHANGELOG / HISTORY
-# LICENSE / LICENCE
-# NOTICE
-**
-!**/bin/main.js

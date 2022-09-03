@@ -43,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/bussedev/monorepo/issues"
   },
-  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/common"
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/common",
+  "files": [
+    "dist"
+  ]
 }
