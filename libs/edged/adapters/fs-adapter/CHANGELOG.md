@@ -1,5 +1,13 @@
 # @edged/fs-adapter
 
+## 1.0.3
+
+### Patch Changes
+
+- 6bed991: Upgrade deps
+- Updated dependencies [6bed991]
+  - @edged/core@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
   "bin": "bin/main.js",
   "name": "@busse/nest-pluggit-collector",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "UNLICENSED",
   "main": "dist",
   "pkg": {

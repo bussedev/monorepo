@@ -1,5 +1,13 @@
 # @busse/nest-pluggit-collector
 
+## 1.0.11
+
+### Patch Changes
+
+- 6bed991: Upgrade deps
+- Updated dependencies [6bed991]
+  - @busse/nest-pluggit@1.0.11
+
 ## 1.0.10
 
 ### Patch Changes

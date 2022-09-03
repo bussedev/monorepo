@@ -1,5 +1,11 @@
 # @busse/pluggit
 
+## 2.0.4
+
+### Patch Changes
+
+- 6bed991: Upgrade deps
+
 ## 2.0.3
 
 ### Patch Changes

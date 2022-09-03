@@ -1,5 +1,14 @@
 # @busse/homebridge-pluggit
 
+## 1.2.5
+
+### Patch Changes
+
+- 6bed991: Upgrade deps
+- Updated dependencies [6bed991]
+  - @busse/net-scan@1.0.3
+  - @busse/pluggit@2.0.4
+
 ## 1.2.4
 
 ### Patch Changes

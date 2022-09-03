@@ -1,5 +1,11 @@
 # @busse/testing
 
+## 1.0.2
+
+### Patch Changes
+
+- 6bed991: Upgrade deps
+
 ## 1.0.1
 
 ### Patch Changes

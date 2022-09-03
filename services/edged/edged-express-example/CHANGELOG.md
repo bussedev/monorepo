@@ -1,5 +1,15 @@
 # @edged/express-example
 
+## 1.0.3
+
+### Patch Changes
+
+- 6bed991: Upgrade deps
+- Updated dependencies [6bed991]
+  - @edged/http-adapter@1.0.3
+  - @edged/s3-adapter@1.0.3
+  - @edged/express-sharp@1.0.2
+
 ## 1.0.2
 
 ### Patch Changes

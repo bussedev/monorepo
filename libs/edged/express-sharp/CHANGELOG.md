@@ -1,5 +1,17 @@
 # @edged/express-sharp
 
+## 1.0.2
+
+### Patch Changes
+
+- 6bed991: Upgrade deps
+- Updated dependencies [6bed991]
+  - @edged/fs-adapter@1.0.3
+  - @edged/client@1.0.3
+  - @edged/common@1.0.3
+  - @edged/core@1.0.3
+  - @edged/config@1.0.3
+
 ## 1.0.1
 
 ### Patch Changes
