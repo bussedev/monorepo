@@ -27,7 +27,6 @@
     "pnpm": ">=6.19.0"
   },
   "repository": {
-    "type": "git",
     "url": "git@github.com:bussedev/monorepo.git"
   },
   "keywords": [
@@ -41,7 +40,7 @@
   "bugs": {
     "url": "https://github.com/bussedev/monorepo/issues"
   },
-  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/client",
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/edged/client#readme",
   "files": [
     "dist"
   ]

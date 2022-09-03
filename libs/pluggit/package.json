@@ -30,5 +30,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/bussedev/monorepo/issues"
+  },
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/pluggit#readme",
+  "repository": {
+    "url": "git@github.com:bussedev/monorepo.git"
+  }
 }

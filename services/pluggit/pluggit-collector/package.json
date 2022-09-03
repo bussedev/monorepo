@@ -61,5 +61,12 @@
     "@nestjs/core": "^8.4.7",
     "@nestjs/schedule": "^2.0.1",
     "@nestjs/terminus": "^8.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/bussedev/monorepo/issues"
+  },
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/services/pluggit/pluggit-collector#readme",
+  "repository": {
+    "url": "git@github.com:bussedev/monorepo.git"
   }
 }

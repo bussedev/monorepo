@@ -127,7 +127,6 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     return 'package.json'
   }
 
-  // eslint-disable-next-line sonarjs/cognitive-complexity
   update(
     context: MetaUpdaterContext<PackageManifest>,
   ): MetaUpdaterContext<PackageManifest> {
@@ -136,15 +135,6 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     }
 
     this.updateGeneral(context)
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    if (!(context.manifest.private ?? false) && !context.manifest.files) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      context.manifest.files = context.manifest.files ?? ['dist']
-    }
 
     if (this.isLibProject(context)) {
       this.updateLib(context)
@@ -155,7 +145,17 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     return context
   }
 
+  // eslint-disable-next-line sonarjs/cognitive-complexity
   updateGeneral(context: MetaUpdaterContext<PackageManifest>): void {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    if (!(context.manifest.private ?? false) && !context.manifest.files) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      context.manifest.files = context.manifest.files ?? ['dist']
+    }
+
     this.setEngines(context)
 
     this.setScript(context, 'clean', 'rimraf dist *.tsbuildinfo')
@@ -170,6 +170,22 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     )
 
     this.setScript(context, 'test', 'jest --passWithNoTests')
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    context.manifest.bugs = context.manifest.bugs ?? {
+      url: 'https://github.com/bussedev/monorepo/issues',
+    }
+
+    context.manifest.homepage = `https://github.com/bussedev/monorepo/tree/main/${path.relative(
+      context.workspaceDir,
+      context.dir,
+    )}#readme`
+
+    context.manifest.repository = {
+      url: 'git@github.com:bussedev/monorepo.git',
+    }
 
     if (context.data.dependencies) {
       context.data.dependencies = this.fixWorkspaceDeps(

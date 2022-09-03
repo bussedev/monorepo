@@ -41,5 +41,12 @@
     "@nestjs/core": "^8.4.7",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.5"
+  },
+  "bugs": {
+    "url": "https://github.com/bussedev/monorepo/issues"
+  },
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/nest-pluggit#readme",
+  "repository": {
+    "url": "git@github.com:bussedev/monorepo.git"
   }
 }

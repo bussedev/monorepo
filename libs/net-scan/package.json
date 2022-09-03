@@ -1,5 +1,6 @@
 {
   "name": "@busse/net-scan",
+  "description": "Find devices on the local network that have a specific port open",
   "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index",
@@ -30,5 +31,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/bussedev/monorepo/issues"
+  },
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/net-scan#readme",
+  "repository": {
+    "url": "git@github.com:bussedev/monorepo.git"
+  }
 }

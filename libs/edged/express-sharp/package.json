@@ -51,7 +51,6 @@
     "pnpm": ">=6.19.0"
   },
   "repository": {
-    "type": "git",
     "url": "git@github.com:bussedev/monorepo.git"
   },
   "keywords": [

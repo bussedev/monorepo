@@ -24,5 +24,12 @@
     "@pnpm/find-workspace-packages": "^4.0.13",
     "@pnpm/logger": "^4.0.0",
     "tslib": "^2.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/bussedev/monorepo/issues"
+  },
+  "homepage": "https://github.com/bussedev/monorepo/tree/main/tools/jest-config#readme",
+  "repository": {
+    "url": "git@github.com:bussedev/monorepo.git"
   }
 }
