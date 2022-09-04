@@ -1,7 +1,7 @@
 {
   "name": "@busse/homebridge-pluggit",
   "displayName": "Pluggit AP190/AP310/AP460",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "license": "MIT",
   "main": "dist/index",
   "description": "Homebridge plugin for Pluggit AP190/AP310/AP460 ventilation units",
@@ -13,10 +13,12 @@
     "clean": "rimraf dist *.tsbuildinfo",
     "lint": "eslint --cache ./src --ignore-path ../../.eslintignore"
   },
-  "maintainers": [{
-    "name": "Philipp Busse",
-    "url": "https://twitter.com/boxi0"
-  }],
+  "maintainers": [
+    {
+      "name": "Philipp Busse",
+      "url": "https://twitter.com/boxi0"
+    }
+  ],
   "keywords": [
     "homebridge-plugin",
     "Pluggit",

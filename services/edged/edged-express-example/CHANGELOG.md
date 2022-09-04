@@ -1,5 +1,15 @@
 # @edged/express-example
 
+## 1.0.5
+
+### Patch Changes
+
+- 4102331: Allow Node.js v14
+- Updated dependencies [4102331]
+  - @edged/http-adapter@1.0.5
+  - @edged/s3-adapter@1.0.5
+  - @edged/express-sharp@1.0.4
+
 ## 1.0.4
 
 ### Patch Changes

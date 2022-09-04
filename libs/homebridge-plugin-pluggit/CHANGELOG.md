@@ -1,5 +1,14 @@
 # @busse/homebridge-pluggit
 
+## 1.2.8
+
+### Patch Changes
+
+- 4102331: Allow Node.js v14
+- Updated dependencies [4102331]
+  - @busse/net-scan@1.0.4
+  - @busse/pluggit@2.0.5
+
 ## 1.2.7
 
 ### Patch Changes

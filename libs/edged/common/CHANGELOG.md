@@ -1,5 +1,14 @@
 # @edged/common
 
+## 1.0.5
+
+### Patch Changes
+
+- 4102331: Allow Node.js v14
+- Updated dependencies [4102331]
+  - @edged/config@1.0.5
+  - @edged/core@1.0.5
+
 ## 1.0.4
 
 ### Patch Changes

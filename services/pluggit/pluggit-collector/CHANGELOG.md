@@ -1,5 +1,13 @@
 # @busse/nest-pluggit-collector
 
+## 1.0.12
+
+### Patch Changes
+
+- 4102331: Allow Node.js v14
+- Updated dependencies [4102331]
+  - @busse/nest-pluggit@1.0.12
+
 ## 1.0.11
 
 ### Patch Changes

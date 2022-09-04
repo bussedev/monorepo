@@ -1,5 +1,11 @@
 # @busse/pluggit
 
+## 2.0.5
+
+### Patch Changes
+
+- 4102331: Allow Node.js v14
+
 ## 2.0.4
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @busse/create-package
 
+## 1.0.3
+
+### Patch Changes
+
+- 4102331: Allow Node.js v14
+- Updated dependencies [4102331]
+  - @busse/common@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

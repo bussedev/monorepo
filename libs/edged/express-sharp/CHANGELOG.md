@@ -1,5 +1,17 @@
 # @edged/express-sharp
 
+## 1.0.4
+
+### Patch Changes
+
+- 4102331: Allow Node.js v14
+- Updated dependencies [4102331]
+  - @edged/fs-adapter@1.0.5
+  - @edged/client@1.0.5
+  - @edged/common@1.0.5
+  - @edged/config@1.0.5
+  - @edged/core@1.0.5
+
 ## 1.0.3
 
 ### Patch Changes
