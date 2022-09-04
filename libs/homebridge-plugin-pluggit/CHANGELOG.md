@@ -1,5 +1,11 @@
 # @busse/homebridge-pluggit
 
+## 1.2.7
+
+### Patch Changes
+
+- c859f59: Fix dependencies
+
 ## 1.2.6
 
 ### Patch Changes
