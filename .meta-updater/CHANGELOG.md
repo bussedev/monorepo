@@ -1,5 +1,11 @@
 # @busse/updater
 
+## 1.0.4
+
+### Patch Changes
+
+- b6fd0b2: add missing homebridge engine
+
 ## 1.0.3
 
 ### Patch Changes

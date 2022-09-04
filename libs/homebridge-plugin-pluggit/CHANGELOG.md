@@ -1,5 +1,11 @@
 # @busse/homebridge-pluggit
 
+## 1.2.10
+
+### Patch Changes
+
+- b6fd0b2: add missing homebridge engine
+
 ## 1.2.9
 
 ### Patch Changes
