@@ -2,12 +2,15 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {},
   "exclude": [
-    "node_modules",
-    "test",
-    "dist",
+    "**/__mocks__",
+    "**/__test__",
     "**/*.spec.ts",
     "**/*.spec.tsx",
-    "**/__test__"
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "dist",
+    "node_modules",
+    "test"
   ],
   "references": []
 }

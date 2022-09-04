@@ -134,7 +134,7 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     if (!(context.manifest.private ?? false) && !context.manifest.files) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-       
+
       context.manifest.files = context.manifest.files ?? ['dist']
     }
 
@@ -336,7 +336,10 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
 }
 
 export class TypeScriptConfigUpdater extends MetaUpdater {
-  constructor(public readonly tsConfigKey: string) {
+  constructor(
+    public readonly tsConfigKey: string,
+    private readonly exludes: string[] = [],
+  ) {
     super()
   }
 
@@ -344,6 +347,7 @@ export class TypeScriptConfigUpdater extends MetaUpdater {
     return this.tsConfigKey
   }
 
+  // eslint-disable-next-line sonarjs/cognitive-complexity
   update(context: MetaUpdaterContext): MetaUpdaterContext {
     if (
       context.data == null ||
@@ -384,6 +388,14 @@ export class TypeScriptConfigUpdater extends MetaUpdater {
       }),
     }
 
+    context.data.exclude = [
+      ...[
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        ...new Set<string>([...(context.data.exclude ?? []), ...this.exludes]),
+      ].sort((a, b) => a.localeCompare(b)),
+    ]
+
     return context
   }
 
@@ -413,7 +425,17 @@ export class ESLintRcUpdater extends MetaUpdater {
 const metaUpdaterRunner = new MetaUpdaterRunner(
   new PackageJsonUpdater(),
   new TypeScriptConfigUpdater('tsconfig.json'),
-  new TypeScriptConfigUpdater('tsconfig.build.json'),
+  new TypeScriptConfigUpdater('tsconfig.build.json', [
+    '**/__mocks__',
+    '**/__test__',
+    '**/*.spec.ts',
+    '**/*.spec.tsx',
+    '**/*.test.ts',
+    '**/*.test.tsx',
+    'dist',
+    'node_modules',
+    'test',
+  ]),
   new ESLintRcUpdater(),
 )
 

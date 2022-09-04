@@ -4,13 +4,7 @@
     "outDir": "./dist",
     "rootDir": "src"
   },
-  "include": [
-    "src/**/*",
-    "e2e/**/*"
-  ],
+  "include": ["src/**/*", "e2e/**/*"],
   "references": [],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "exclude": ["dist", "node_modules"]
 }

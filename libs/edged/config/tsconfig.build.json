@@ -1,8 +1,15 @@
 {
   "extends": "./tsconfig.json",
   "exclude": [
+    "**/__mocks__",
+    "**/__test__",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "dist",
     "node_modules",
-    "dist"
+    "test"
   ],
   "references": [
     {
