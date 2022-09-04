@@ -10,8 +10,9 @@
     "lint": "eslint --cache ./src --ignore-path ../../.eslintignore"
   },
   "bin": {
-    "net-scan": "dist/cli"
+    "net-scan": "bin/net-scan"
   },
+  "preferGlobal": true,
   "dependencies": {
     "@busse/net-scan": "workspace:*",
     "commander": "^9.4.0",
