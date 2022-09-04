@@ -13,10 +13,10 @@
   ],
   "references": [
     {
-      "path": "../pluggit/tsconfig.json"
+      "path": "../../testing/tsconfig.json"
     },
     {
-      "path": "../testing/tsconfig.json"
+      "path": "../pluggit-client/tsconfig.json"
     }
   ]
 }

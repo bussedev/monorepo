@@ -64,7 +64,7 @@ importers:
       webpack-cli: ^4.10.0
       webpack-node-externals: ^3.0.0
     dependencies:
-      '@busse/homebridge-pluggit': link:libs/homebridge-plugin-pluggit
+      '@busse/homebridge-pluggit': link:libs/pluggit/homebridge-plugin-pluggit
       '@nestjs/apollo': 10.1.0
       '@nestjs/axios': 0.0.8
       '@nestjs/common': 8.4.7_e6kgdsnyya5caxg3ysdyxrqm7a
@@ -341,66 +341,6 @@ importers:
       '@types/supertest': 2.0.12
       supertest: 6.2.4
 
-  libs/homebridge-plugin-pluggit:
-    specifiers:
-      '@busse/jest-config': workspace:*
-      '@busse/net-scan': workspace:*
-      '@busse/pluggit': workspace:*
-      '@busse/testing': workspace:*
-      '@jest/types': ^28.1.3
-      '@types/node': ^16.11.56
-      homebridge: ^1.5.0
-      homebridge-config-ui-x: 4.49.0
-      jest: ^29.0.2
-      jest-junit: ^13.2.0
-      ts-jest: ^28.0.8
-      tslib: ^2.4.0
-      typescript: ^4.8.2
-    dependencies:
-      '@busse/net-scan': link:../net-scan
-      '@busse/pluggit': link:../pluggit
-      tslib: 2.4.0
-    devDependencies:
-      '@busse/jest-config': link:../../tools/jest-config
-      '@busse/testing': link:../testing
-      '@jest/types': 28.1.3
-      '@types/node': 16.11.56
-      homebridge: 1.5.0
-      homebridge-config-ui-x: 4.49.0
-      jest: 29.0.2_@types+node@16.11.56
-      jest-junit: 13.2.0
-      ts-jest: 28.0.8_2nd6eck3raazwylzlszgisqzpq
-      typescript: 4.8.2
-
-  libs/nest-pluggit:
-    specifiers:
-      '@busse/jest-config': workspace:*
-      '@busse/pluggit': workspace:*
-      '@busse/testing': workspace:*
-      '@jest/types': ^28.1.3
-      '@types/node': ^16.11.56
-      jest: ^29.0.2
-      jest-junit: ^13.2.0
-      nestjs-pino: ^3.1.1
-      pino-http: ^8.2.0
-      ts-jest: ^28.0.8
-      tslib: ^2.4.0
-      typescript: ^4.8.2
-    dependencies:
-      '@busse/pluggit': link:../pluggit
-      nestjs-pino: 3.1.1_pino-http@8.2.0
-      pino-http: 8.2.0
-      tslib: 2.4.0
-    devDependencies:
-      '@busse/jest-config': link:../../tools/jest-config
-      '@busse/testing': link:../testing
-      '@jest/types': 28.1.3
-      '@types/node': 16.11.56
-      jest: 29.0.2_@types+node@16.11.56
-      jest-junit: 13.2.0
-      ts-jest: 28.0.8_2nd6eck3raazwylzlszgisqzpq
-      typescript: 4.8.2
-
   libs/net-scan:
     specifiers:
       '@busse/jest-config': workspace:*
@@ -453,7 +393,67 @@ importers:
       jest-junit: 13.2.0
       typescript: 4.8.2
 
-  libs/pluggit:
+  libs/pluggit/homebridge-plugin-pluggit:
+    specifiers:
+      '@busse/jest-config': workspace:*
+      '@busse/net-scan': workspace:*
+      '@busse/pluggit': workspace:*
+      '@busse/testing': workspace:*
+      '@jest/types': ^28.1.3
+      '@types/node': ^16.11.56
+      homebridge: ^1.5.0
+      homebridge-config-ui-x: 4.49.0
+      jest: ^29.0.2
+      jest-junit: ^13.2.0
+      ts-jest: ^28.0.8
+      tslib: ^2.4.0
+      typescript: ^4.8.2
+    dependencies:
+      '@busse/net-scan': link:../../net-scan
+      '@busse/pluggit': link:../pluggit-client
+      tslib: 2.4.0
+    devDependencies:
+      '@busse/jest-config': link:../../../tools/jest-config
+      '@busse/testing': link:../../testing
+      '@jest/types': 28.1.3
+      '@types/node': 16.11.56
+      homebridge: 1.5.0
+      homebridge-config-ui-x: 4.49.0
+      jest: 29.0.2_@types+node@16.11.56
+      jest-junit: 13.2.0
+      ts-jest: 28.0.8_2nd6eck3raazwylzlszgisqzpq
+      typescript: 4.8.2
+
+  libs/pluggit/nest-pluggit-client:
+    specifiers:
+      '@busse/jest-config': workspace:*
+      '@busse/pluggit': workspace:*
+      '@busse/testing': workspace:*
+      '@jest/types': ^28.1.3
+      '@types/node': ^16.11.56
+      jest: ^29.0.2
+      jest-junit: ^13.2.0
+      nestjs-pino: ^3.1.1
+      pino-http: ^8.2.0
+      ts-jest: ^28.0.8
+      tslib: ^2.4.0
+      typescript: ^4.8.2
+    dependencies:
+      '@busse/pluggit': link:../pluggit-client
+      nestjs-pino: 3.1.1_pino-http@8.2.0
+      pino-http: 8.2.0
+      tslib: 2.4.0
+    devDependencies:
+      '@busse/jest-config': link:../../../tools/jest-config
+      '@busse/testing': link:../../testing
+      '@jest/types': 28.1.3
+      '@types/node': 16.11.56
+      jest: 29.0.2_@types+node@16.11.56
+      jest-junit: 13.2.0
+      ts-jest: 28.0.8_2nd6eck3raazwylzlszgisqzpq
+      typescript: 4.8.2
+
+  libs/pluggit/pluggit-client:
     specifiers:
       '@busse/jest-config': workspace:*
       '@busse/testing': workspace:*
@@ -470,8 +470,8 @@ importers:
       p-limit: 3.1.0
       tslib: 2.4.0
     devDependencies:
-      '@busse/jest-config': link:../../tools/jest-config
-      '@busse/testing': link:../testing
+      '@busse/jest-config': link:../../../tools/jest-config
+      '@busse/testing': link:../../testing
       '@jest/types': 28.1.3
       '@types/node': 16.11.56
       jest: 29.0.2_@types+node@16.11.56
@@ -541,7 +541,7 @@ importers:
       tslib: ^2.4.0
       typescript: ^4.8.2
     dependencies:
-      '@busse/nest-pluggit': link:../../../libs/nest-pluggit
+      '@busse/nest-pluggit': link:../../../libs/pluggit/nest-pluggit-client
       '@influxdata/influxdb-client': 1.29.0
       nestjs-pino: 3.1.1_pino-http@8.2.0
       pino-http: 8.2.0
@@ -574,8 +574,8 @@ importers:
       tslib: ^2.4.0
       typescript: ^4.8.2
     dependencies:
-      '@busse/nest-pluggit': link:../../../libs/nest-pluggit
-      '@busse/pluggit': link:../../../libs/pluggit
+      '@busse/nest-pluggit': link:../../../libs/pluggit/nest-pluggit-client
+      '@busse/pluggit': link:../../../libs/pluggit/pluggit-client
       nestjs-pino: 3.1.1_pino-http@8.2.0
       pino-http: 8.2.0
       pino-pretty: 9.1.0
@@ -3851,7 +3851,7 @@ packages:
   /@types/jsonwebtoken/8.5.4:
     resolution: {integrity: sha512-4L8msWK31oXwdtC81RmRBAULd0ShnAHjBuKT9MRQpjP0piNrZdXyTRcKY9/UIfhGeKIT4PvF5amOOUbbT/9Wpg==}
     dependencies:
-      '@types/node': 16.11.56
+      '@types/node': 18.7.14
     dev: true
 
   /@types/keyv/3.1.4:
@@ -6275,7 +6275,7 @@ packages:
     dependencies:
       '@types/cookie': 0.4.1
       '@types/cors': 2.8.12
-      '@types/node': 16.11.56
+      '@types/node': 18.7.14
       accepts: 1.3.8
       base64id: 2.0.0
       cookie: 0.4.2
@@ -7025,7 +7025,7 @@ packages:
       proxy-addr: 2.0.7
       rfdc: 1.3.0
       secure-json-parse: 2.5.0
-      semver: 7.3.6
+      semver: 7.3.7
       tiny-lru: 8.0.2
     transitivePeerDependencies:
       - supports-color

@@ -14,7 +14,7 @@
   ],
   "references": [
     {
-      "path": "../../../libs/nest-pluggit/tsconfig.json"
+      "path": "../../../libs/pluggit/nest-pluggit-client/tsconfig.json"
     }
   ]
 }

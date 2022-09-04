@@ -11,10 +11,10 @@
   ],
   "references": [
     {
-      "path": "../../../libs/nest-pluggit/tsconfig.build.json"
+      "path": "../../../libs/pluggit/nest-pluggit-client/tsconfig.build.json"
     },
     {
-      "path": "../../../libs/pluggit/tsconfig.build.json"
+      "path": "../../../libs/pluggit/pluggit-client/tsconfig.build.json"
     }
   ]
 }

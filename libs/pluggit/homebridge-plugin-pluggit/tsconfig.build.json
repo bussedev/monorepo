@@ -11,13 +11,13 @@
   ],
   "references": [
     {
-      "path": "../net-scan/tsconfig.build.json"
+      "path": "../../net-scan/tsconfig.build.json"
     },
     {
-      "path": "../pluggit/tsconfig.build.json"
+      "path": "../../testing/tsconfig.build.json"
     },
     {
-      "path": "../testing/tsconfig.build.json"
+      "path": "../pluggit-client/tsconfig.build.json"
     }
   ]
 }
