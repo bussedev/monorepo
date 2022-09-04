@@ -1,5 +1,11 @@
 # @busse/pluggit
 
+## 2.0.7
+
+### Patch Changes
+
+- 874fbb6: reorganize package locations in monorepo
+
 ## 2.0.6
 
 ### Patch Changes

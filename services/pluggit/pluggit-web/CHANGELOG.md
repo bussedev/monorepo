@@ -1,5 +1,14 @@
 # @busse/nest-pluggit-web
 
+## 1.0.14
+
+### Patch Changes
+
+- 874fbb6: reorganize package locations in monorepo
+- Updated dependencies [874fbb6]
+  - @busse/nest-pluggit@1.0.14
+  - @busse/pluggit@2.0.7
+
 ## 1.0.13
 
 ### Patch Changes

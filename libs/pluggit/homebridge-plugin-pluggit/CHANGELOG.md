@@ -1,5 +1,13 @@
 # @busse/homebridge-pluggit
 
+## 1.2.11
+
+### Patch Changes
+
+- 874fbb6: reorganize package locations in monorepo
+- Updated dependencies [874fbb6]
+  - @busse/pluggit@2.0.7
+
 ## 1.2.10
 
 ### Patch Changes
