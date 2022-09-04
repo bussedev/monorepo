@@ -1,5 +1,11 @@
 # @busse/net-scan-cli
 
+## 1.0.2
+
+### Patch Changes
+
+- d1546e4: fix bin setup
+
 ## 1.0.1
 
 ### Patch Changes
