@@ -1,5 +1,14 @@
 # @busse/homebridge-pluggit
 
+## 1.2.12
+
+### Patch Changes
+
+- 7d0d4e6: add missing metadata
+- Updated dependencies [7d0d4e6]
+  - @busse/net-scan@1.0.5
+  - @busse/pluggit@2.0.8
+
 ## 1.2.11
 
 ### Patch Changes

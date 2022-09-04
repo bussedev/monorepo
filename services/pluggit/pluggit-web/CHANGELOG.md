@@ -1,5 +1,14 @@
 # @busse/nest-pluggit-web
 
+## 1.0.15
+
+### Patch Changes
+
+- 7d0d4e6: add missing metadata
+- Updated dependencies [7d0d4e6]
+  - @busse/nest-pluggit@1.0.15
+  - @busse/pluggit@2.0.8
+
 ## 1.0.14
 
 ### Patch Changes

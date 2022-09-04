@@ -1,7 +1,7 @@
 {
   "name": "@busse/net-scan-cli",
   "description": "Find devices on the local network that have a specific port open",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "scripts": {
     "build": "tsc --build tsconfig.build.json",

@@ -1,5 +1,11 @@
 # @busse/net-scan
 
+## 1.0.5
+
+### Patch Changes
+
+- 7d0d4e6: add missing metadata
+
 ## 1.0.4
 
 ### Patch Changes

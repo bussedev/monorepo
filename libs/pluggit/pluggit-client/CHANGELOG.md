@@ -1,5 +1,11 @@
 # @busse/pluggit
 
+## 2.0.8
+
+### Patch Changes
+
+- 7d0d4e6: add missing metadata
+
 ## 2.0.7
 
 ### Patch Changes

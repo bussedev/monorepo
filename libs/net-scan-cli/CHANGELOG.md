@@ -1,5 +1,13 @@
 # @busse/net-scan-cli
 
+## 1.0.3
+
+### Patch Changes
+
+- 7d0d4e6: add missing metadata
+- Updated dependencies [7d0d4e6]
+  - @busse/net-scan@1.0.5
+
 ## 1.0.2
 
 ### Patch Changes
