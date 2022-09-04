@@ -6,7 +6,7 @@
   "main": "tsconfig.json",
   "author": "Philipp Busse",
   "engines": {
-    "node": ">=16.13.0",
+    "node": ">=14.17.0",
     "pnpm": ">=6.19.0"
   },
   "scripts": {

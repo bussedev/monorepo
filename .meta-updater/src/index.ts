@@ -134,7 +134,7 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     if (!(context.manifest.private ?? false) && !context.manifest.files) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+       
       context.manifest.files = context.manifest.files ?? ['dist']
     }
 
@@ -239,7 +239,7 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
 
   setEngines(context: MetaUpdaterContext<PackageManifest>): void {
     context.data.engines = {
-      node: '>=16.13.0',
+      node: '>=14.17.0',
       pnpm: '>=6.19.0',
     }
   }

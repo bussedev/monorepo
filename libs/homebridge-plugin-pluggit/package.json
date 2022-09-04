@@ -13,12 +13,10 @@
     "clean": "rimraf dist *.tsbuildinfo",
     "lint": "eslint --cache ./src --ignore-path ../../.eslintignore"
   },
-  "maintainers": [
-    {
-      "name": "Philipp Busse",
-      "url": "https://twitter.com/boxi0"
-    }
-  ],
+  "maintainers": [{
+    "name": "Philipp Busse",
+    "url": "https://twitter.com/boxi0"
+  }],
   "keywords": [
     "homebridge-plugin",
     "Pluggit",
@@ -48,7 +46,7 @@
     "typescript": "^4.8.2"
   },
   "engines": {
-    "node": ">=16.13.0",
+    "node": ">=14.17.0",
     "pnpm": ">=6.19.0"
   },
   "files": [
