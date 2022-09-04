@@ -1,5 +1,12 @@
 # @busse/nest-pluggit-collector
 
+## 1.0.13
+
+### Patch Changes
+
+- Updated dependencies [4edf12f]
+  - @busse/nest-pluggit@1.0.13
+
 ## 1.0.12
 
 ### Patch Changes

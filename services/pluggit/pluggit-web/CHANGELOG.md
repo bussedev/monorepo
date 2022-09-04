@@ -1,5 +1,14 @@
 # @busse/nest-pluggit-web
 
+## 1.0.13
+
+### Patch Changes
+
+- 4edf12f: replace modbus-serial with lighter alternative jsmodbus
+- Updated dependencies [4edf12f]
+  - @busse/nest-pluggit@1.0.13
+  - @busse/pluggit@2.0.6
+
 ## 1.0.12
 
 ### Patch Changes
