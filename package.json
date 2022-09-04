@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bump": "changeset version && pnpm -w update-manifests",
+    "bump": "changeset version ; pnpm -w update-manifests",
     "update-manifests": "pnpm run meta-updater && pnpm install",
     "meta-updater": "pnpm --filter=@busse/updater build && pnpm --config.use-node-version=16.13.0 exec meta-updater",
     "clean": "pnpm -r --parallel clean",
