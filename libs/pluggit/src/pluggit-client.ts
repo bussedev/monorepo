@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
+import { Socket } from 'net'
 import { ModBusConnection } from './connection-manager'
-import { ModbusRTU } from './pluggit.constants'
 import {
   BypassState,
   Components,
@@ -36,9 +36,9 @@ export class PluggitClient {
   readonly #ip: string
   readonly #connection: ModBusConnection
 
-  constructor(ip: string, modbus = new ModbusRTU()) {
+  constructor(ip: string, socket = new Socket()) {
     this.#ip = ip
-    this.#connection = new ModBusConnection(this.#ip, modbus)
+    this.#connection = new ModBusConnection(this.#ip, socket)
   }
 
   // The by-pass will open when all the following conditions are fulfilled:
@@ -119,7 +119,7 @@ export class PluggitClient {
         throw new Error(`Invalid unit mode: ${mode}`)
       }
 
-      await modbus.writeRegisters(169 - 1, [mode, 0])
+      await modbus.writeMultipleRegisters(169 - 1, [mode, 0])
     })
   }
 
@@ -162,7 +162,7 @@ export class PluggitClient {
   async setSpeedLevel(level: SpeedLevel) {
     await this.#connection.request(async (modbus) => {
       // await this.setManualMode()
-      await modbus.writeRegisters(325 - 1, [level, 0])
+      await modbus.writeMultipleRegisters(325 - 1, [level, 0])
     })
   }
 
@@ -219,7 +219,7 @@ export class PluggitClient {
       buffer.write(name, 0, 32, 'utf8')
       buffer.swap16()
 
-      await modbus.writeRegisters(9 - 1, buffer)
+      await modbus.writeMultipleRegisters(9 - 1, buffer)
     })
   }
 
@@ -244,10 +244,12 @@ export class PluggitClient {
       const length =
         register.length ?? (register.type === RegisterType.Int16 ? 1 : 2)
 
-      const { buffer } = await modbus.readHoldingRegisters(
+      const { response } = await modbus.readHoldingRegisters(
         register.id - 1,
         length,
       )
+
+      const buffer = response.body.valuesAsBuffer
 
       if (asBuffer) {
         return buffer

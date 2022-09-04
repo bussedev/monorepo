@@ -1,27 +1,47 @@
-import ModbusRTU from 'modbus-serial'
+import { ModbusTCPClient } from 'jsmodbus'
+import { Socket } from 'net'
 import pLimit from 'p-limit'
 
 export class ModBusConnection {
-  readonly #modbus: ModbusRTU
+  readonly #modbus: ModbusTCPClient
   readonly #ipAddress: string
   readonly #limited = pLimit(1)
+  readonly #socket: Socket
 
-  constructor(ipAddress: string, modbus: ModbusRTU) {
+  constructor(ipAddress: string, socket = new Socket()) {
     this.#ipAddress = ipAddress
-    this.#modbus = modbus
+    this.#socket = socket
+    this.#modbus = new ModbusTCPClient(this.#socket)
   }
 
-  async request<T>(fn: (modbus: ModbusRTU) => T | Promise<T>): Promise<T> {
+  async request<T>(
+    fn: (modbus: ModbusTCPClient) => T | Promise<T>,
+  ): Promise<T> {
     return this.#limited(async () => {
-      if (!this.#modbus.isOpen) {
-        await this.#modbus.connectTCP(this.#ipAddress, {})
-      }
-
+      await this.ensureConnected()
       return fn(this.#modbus)
     })
   }
 
+  async ensureConnected(): Promise<void> {
+    if (this.#modbus.connectionState === 'offline') {
+      await this.connect()
+    }
+  }
+
+  async connect(): Promise<void> {
+    await new Promise<void>((resolve) => {
+      this.#socket.connect({ host: this.#ipAddress, port: 502 }, () => {
+        resolve()
+      })
+    })
+  }
+
   async disconnect(): Promise<void> {
-    await new Promise((resolve) => this.#modbus.close(resolve))
+    await new Promise<void>((resolve) =>
+      this.#socket.end(() => {
+        resolve()
+      }),
+    )
   }
 }

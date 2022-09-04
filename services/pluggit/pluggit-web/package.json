@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
-    "start:dev": "tsc-watch  --build tsconfig.build.json --onSuccess 'node --inspect=0.0.0.0:9229 --enable-source-maps dist/main' --preserveWatchOutput | pino-pretty",
+    "start:dev": "tsc-watch  --build tsconfig.build.json --onSuccess 'node --inspect=0.0.0.0:9229 --enable-source-maps dist/main' --preserveWatchOutput | pino-pretty -c",
     "test": "jest --passWithNoTests",
     "clean": "rimraf dist *.tsbuildinfo",
     "lint": "eslint --cache ./src --report-unused-disable-directives --ignore-path ../../../.eslintignore",
