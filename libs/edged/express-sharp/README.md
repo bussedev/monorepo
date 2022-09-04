@@ -53,7 +53,7 @@ See [sharp installation](https://sharp.pixelplumbing.com/install) for additional
 
 # Express server integration
 
-Example _app.js_ (See also `example/app.ts` in this project):
+Example _app.js_ (See also the [example app](https://github.com/bussedev/monorepo/tree/main/services/edged/edged-express-example)):
 
 ```js
 import express from 'express'
