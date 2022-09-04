@@ -1,0 +1,20 @@
+{
+  "extends": "@busse",
+  "rules": {
+    "node/no-missing-import": "off",
+    "unicorn/import-style": "off",
+    "unicorn/no-null": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "@typescript-eslint/consistent-type-exports": "error"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.spec.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/unbound-method": "off"
+      }
+    }
+  ]
+}

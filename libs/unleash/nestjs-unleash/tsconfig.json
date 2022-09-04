@@ -1,0 +1,16 @@
+{
+  "extends": "@busse/tsconfig",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "src"
+  },
+  "include": [
+    "src/**/*",
+    "e2e/**/*"
+  ],
+  "references": [],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
