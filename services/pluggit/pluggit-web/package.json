@@ -66,5 +66,6 @@
   "homepage": "https://github.com/bussedev/monorepo/tree/main/services/pluggit/pluggit-web#readme",
   "repository": {
     "url": "git@github.com:bussedev/monorepo.git"
-  }
+  },
+  "author": "Philipp Busse"
 }

@@ -134,9 +134,11 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
     if (!(context.manifest.private ?? false) && !context.manifest.files) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-
+       
       context.manifest.files = context.manifest.files ?? ['dist']
     }
+
+    this.ensureAuthor(context)
 
     this.setEngines(context)
 
@@ -326,6 +328,10 @@ export class PackageJsonUpdater extends MetaUpdater<PackageManifest> {
       ...context.data.scripts,
       [name]: script,
     }
+  }
+
+  ensureAuthor(context: MetaUpdaterContext<PackageManifest>): void {
+    context.manifest.author ??= 'Philipp Busse'
   }
 }
 

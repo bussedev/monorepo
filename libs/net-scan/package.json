@@ -38,5 +38,6 @@
   "homepage": "https://github.com/bussedev/monorepo/tree/main/libs/net-scan#readme",
   "repository": {
     "url": "git@github.com:bussedev/monorepo.git"
-  }
+  },
+  "author": "Philipp Busse"
 }
