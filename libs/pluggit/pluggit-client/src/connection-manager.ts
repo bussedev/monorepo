@@ -30,10 +30,11 @@ export class ModBusConnection {
   }
 
   async connect(): Promise<void> {
-    await new Promise<void>((resolve) => {
+    await new Promise<void>((resolve, reject) => {
       this.#socket.connect({ host: this.#ipAddress, port: 502 }, () => {
         resolve()
       })
+      this.#socket.once('error', reject)
     })
   }
 
