@@ -1,5 +1,12 @@
 # @busse/homebridge-pluggit
 
+## 1.2.13
+
+### Patch Changes
+
+- Updated dependencies [2a49ef5]
+  - @busse/pluggit@2.0.9
+
 ## 1.2.12
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # [2.2.0](https://github.com/pmb0/nestjs-unleash/compare/v2.1.0...v2.2.0) (2021-10-18)
 
+## 2.2.1
+
+### Patch Changes
+
+- 846a2f9: upgrade deps
+
 ### Features
 
 - allow user defined context data ([#199](https://github.com/pmb0/nestjs-unleash/issues/199)) ([cb3b054](https://github.com/pmb0/nestjs-unleash/commit/cb3b0545ecaa441d403bcb394470e54ff499aaba))

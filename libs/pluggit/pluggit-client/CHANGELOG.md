@@ -1,5 +1,11 @@
 # @busse/pluggit
 
+## 2.0.9
+
+### Patch Changes
+
+- 2a49ef5: Properly handle connection exceptions
+
 ## 2.0.8
 
 ### Patch Changes

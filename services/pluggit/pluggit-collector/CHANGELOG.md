@@ -1,5 +1,11 @@
 # @busse/nest-pluggit-collector
 
+## 1.0.16
+
+### Patch Changes
+
+- @busse/nest-pluggit@1.0.16
+
 ## 1.0.15
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @busse/nest-pluggit
 
+## 1.0.16
+
+### Patch Changes
+
+- Updated dependencies [2a49ef5]
+  - @busse/pluggit@2.0.9
+
 ## 1.0.15
 
 ### Patch Changes
